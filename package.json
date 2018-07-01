@@ -1,0 +1,15 @@
+{
+  "name": "cs313-nodejs",
+  "version": "1.0.0",
+  "description": "Project to retrieve world cup history data.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fernando Gomez",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "pg": "^7.4.3"
+  }
+}
