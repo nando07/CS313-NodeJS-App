@@ -85,7 +85,7 @@ function getWorldCupChampionsFromDb(year, callback) {
         }
         console.log("Found Db result: " + JSON.stringify(result.rows));
 
-        callback("The year is not correct. The World Cup has not taken place yet or it did not take place", result.rows);
+        callback(null, result.rows);
     });
 }
 
@@ -119,6 +119,6 @@ function getWorldCupTeamsFromDb(year, callback) {
         }
         console.log("Found Db result: " + JSON.stringify(result.rows));
 
-        callback("The year is not correct. The World Cup has not taken place yet or it did not take place", result.rows);
+        callback(null, result.rows);
     });
 }
