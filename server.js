@@ -108,7 +108,7 @@ function getWorldCupTeams(req, res) {
 function getWorldCupTeamsFromDb(year, callback) {
     console.log("getting champion from DB with year ", year);
 
-    var sql = "SELECT name FROM team JOIN worldcup ON team.worldcup = worldcup.id WHERE worldcup.year = $1::int";
+    var sql = "SELECT name FROM team JOIN worldcup ON team.worldcup = worldcup.id WHERE worldcup.year = " + year;
     var params = [year];
 
     pool.query(sql, params, function(err, result){
