@@ -9,7 +9,7 @@ const pool = new Pool({connectionString: connectionString});
 app.set("port", (process.env.PORT || 5000));
 
 app.get("/getWorldCupCountry", getWorldCupCountry)
-app.get("/getWorldCupChampion", getWorldCupChampion)
+app.get("/getWorldCupChampions", getWorldCupChampions)
 
 app.listen(app.get("port"), function() {
     console.log("Now listening for connections on port: ", app.get("port"));
@@ -53,14 +53,14 @@ function getWorldCupCountryFromDb(id, callback) {
 
 }
 
-function getWorldCupChampion(req, res) {
+function getWorldCupChampions(req, res) {
     console.log("Getting World Champions");
 
     var year = req.query.year;
     console.log("Retrieving World Cup champion for year: ", year);
 
 
-    getWorldCupChampionFromDb(year, function(error, result) {
+    getWorldCupChampionsFromDb(year, function(error, result) {
         console.log("Got data back from DB with result:", result);
         if (error || result == null || result.length != 1) {
             res.status(500).json({success:false, data: error});
@@ -70,7 +70,7 @@ function getWorldCupChampion(req, res) {
     });
 }
 
-function getWorldCupChampionFromDb(year, callback) {
+function getWorldCupChampionsFromDb(year, callback) {
     console.log("getting champion from DB with year ", year);
 
     var sql = "SELECT year, champion FROM worldcup WHERE year = $1::int";
