@@ -9,6 +9,7 @@ const pool = new Pool({connectionString: connectionString});
 app.set("port", (process.env.PORT || 5000));
 
 app.get("/getWorldCupCountry", getWorldCupCountry)
+app.get("/getWorldCupChampion", getWorldCupChampion)
 
 app.listen(app.get("port"), function() {
     console.log("Now listening for connections on port: ", app.get("port"));
@@ -50,5 +51,40 @@ function getWorldCupCountryFromDb(id, callback) {
         callback(null, result.rows);
     });
 
+}
+
+function getWorldCupChampion(req, res) {
+    console.log("Getting World Champions");
+
+    var year = req.query.year;
+    console.log("Retrieving World Cup champion for year: ", year);
+
+
+    getWorldCupChampionFromDb(year, function(error, result) {
+        console.log("Got data back from DB with result:", result);
+        if (error || result == null || result.length != 1) {
+            res.status(500).json({success:false, data: error});
+        } else {
+            res.json(result[0]);
+        }
+    });
+}
+
+function getWorldCupChampionFromDb(year, callback) {
+    console.log("getting champion from DB with year ", year);
+
+    var sql = "SELECT year, champion FROM worldcup WHERE year = $1::int";
+    var params = [year];
+
+    pool.query(sql, params, function(err, result){
+        if (err) {
+            console.log("An error occurred with the DB");
+            console.log(err);
+            callback(err, null);
+        }
+        console.log("Found Db result: " + JSON.stringify(result.rows));
+
+        callback(null, result.rows);
+    });
 }
 
