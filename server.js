@@ -10,6 +10,7 @@ app.set("port", (process.env.PORT || 5000));
 
 app.get("/getWorldCupCountry", getWorldCupCountry)
 app.get("/getWorldCupChampions", getWorldCupChampions)
+app.get("/getWorldCupTeams", getWorldCupTeams)
 
 app.listen(app.get("port"), function() {
     console.log("Now listening for connections on port: ", app.get("port"));
@@ -83,8 +84,41 @@ function getWorldCupChampionsFromDb(year, callback) {
             callback(err, null);
         }
         console.log("Found Db result: " + JSON.stringify(result.rows));
-        
+
         callback("The year is not correct. The World Cup has not taken place yet or it did not take place", result.rows);
     });
 }
 
+function getWorldCupTeams(req, res) {
+    console.log("Getting World Champions");
+
+    var year = req.query.year;
+    console.log("Retrieving World Cup champion for year: ", year);
+
+
+    getWorldCupTeamsFromDb(year, function(error, result) {
+        console.log("Got data back from DB with result:", result);
+        if (error || result == null || result.length != 1) {
+            res.status(500).json({success:false, data: error});
+        } else {
+            res.json(result[0]);
+        }
+    });
+}
+function getWorldCupTeamsFromDb(year, callback) {
+    console.log("getting champion from DB with year ", year);
+
+    var sql = "SELECT name FROM team JOIN worldcup ON team.worldcup = worldcup.id WHERE worldcup.year = $1::int";
+    var params = [year];
+
+    pool.query(sql, params, function(err, result){
+        if (err) {
+            console.log("An error occurred with the DB");
+            console.log(err);
+            callback(err, null);
+        }
+        console.log("Found Db result: " + JSON.stringify(result.rows));
+
+        callback("The year is not correct. The World Cup has not taken place yet or it did not take place", result.rows);
+    });
+}
