@@ -80,11 +80,11 @@ function getWorldCupChampionsFromDb(year, callback) {
         if (err) {
             console.log("An error occurred with the DB");
             console.log(err);
-            callback(err, "The year is not correct. The World Cup has not taken place yet or it did not take place");
+            callback(err, null);
         }
         console.log("Found Db result: " + JSON.stringify(result.rows));
-
-        callback(null, result.rows);
+        
+        callback("The year is not correct. The World Cup has not taken place yet or it did not take place", result.rows);
     });
 }
 
