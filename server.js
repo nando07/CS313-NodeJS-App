@@ -98,7 +98,7 @@ function getWorldCupTeams(req, res) {
 
     getWorldCupTeamsFromDb(year, function(error, result) {
         console.log("Got data back from DB with result:", result);
-        if (error || result == null || result.length != 1) {
+        if (error || result == null) {
             res.status(500).json({success:false, data: error});
         } else {
             res.json(result);
