@@ -101,7 +101,7 @@ function getWorldCupTeams(req, res) {
         if (error || result == null) {
             res.status(500).json({success:false, data: error});
         } else {
-            res.json(result);
+            res.json(result[30]);
         }
     });
 }
