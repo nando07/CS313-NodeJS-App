@@ -39,7 +39,7 @@ function getWorldCupCountry(req, res) {
 function getWorldCupCountryFromDb(id, callback) {
     console.log("getting country from DB with id ", id);
 
-    var sql = "SELECT id, country, year, champion, runner_up FROM worldcup WHERE id = $1::int";
+    var sql = "SELECT country FROM worldcup WHERE id = $1::int";
     var params = [id];
 
     pool.query(sql, params, function(err, result){
