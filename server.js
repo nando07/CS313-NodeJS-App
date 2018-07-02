@@ -140,9 +140,9 @@ function getWorldCupDetails(req, res) {
         }
     });
 }
-function getWorldCupTeamsFromDb(year, callback) {
+function getWorldCupDetailsFromDb(year, callback) {
     console.log("getting Details from DB with year ", year);
-    country, year, champion, runner_up
+   
     var sql = "SELECT country, year, champion, runner_up FROM worldcup WHERE year = $1::int";
     var params = [year];
 
