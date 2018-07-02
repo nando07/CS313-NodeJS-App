@@ -11,6 +11,7 @@ app.set("port", (process.env.PORT || 5000));
 app.get("/getWorldCupCountry", getWorldCupCountry)
 app.get("/getWorldCupChampions", getWorldCupChampions)
 app.get("/getWorldCupTeams", getWorldCupTeams)
+app.get("/getWorldCupDetails", getWorldCupDetails)
 
 app.listen(app.get("port"), function() {
     console.log("Now listening for connections on port: ", app.get("port"));
@@ -109,6 +110,40 @@ function getWorldCupTeamsFromDb(year, callback) {
     console.log("getting champion from DB with year ", year);
 
     var sql = "SELECT team.name FROM team INNER JOIN worldcup ON team.worldcup = worldcup.id AND worldcup.year = $1::int";
+    var params = [year];
+
+    pool.query(sql, params, function(err, result){
+        if (err) {
+            console.log("An error occurred with the DB");
+            console.log(err);
+            callback(err, null);
+        }
+        console.log("Found Db result: " + JSON.stringify(result.rows));
+
+        callback(null, result.rows);
+    });
+}
+
+function getWorldCupDetails(req, res) {
+    console.log("Getting World Details");
+
+    var year = req.query.year;
+    console.log("Retrieving World Cup Details for year: ", year);
+
+
+    getWorldCupDetailsFromDb(year, function(error, result) {
+        console.log("Got data back from DB with result:", result);
+        if (error || result == null) {
+            res.status(500).json({success:false, data: error});
+        } else {
+            res.json(result);
+        }
+    });
+}
+function getWorldCupTeamsFromDb(year, callback) {
+    console.log("getting Details from DB with year ", year);
+    country, year, champion, runner_up
+    var sql = "SELECT country, year, champion, runner_up FROM worldcup WHERE year = $1::int";
     var params = [year];
 
     pool.query(sql, params, function(err, result){
