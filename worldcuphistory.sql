@@ -16,7 +16,6 @@ CREATE TABLE team
     group_name VARCHAR(100) NOT NULL,
     worldcup INTEGER REFERENCES worldcup(id)
 );
-
 -- ADD match type (group stage, round of 16 etc...)
 CREATE TABLE matches 
 (
