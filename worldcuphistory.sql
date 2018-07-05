@@ -22,12 +22,12 @@ CREATE TABLE matches
 (
     id SERIAL PRIMARY KEY NOT NULL,
     match_date DATE NOT NULL,
+    match_type VARCHAR(100) NOT NULL,
     home_team INTEGER REFERENCES team (id),
     away_team INTEGER REFERENCES team (id),
     home_team_goals INTEGER NOT NULL,
     away_team_goals INTEGER NOT NULL
 );
-
 
 
 INSERT INTO worldcup(country, year, champion, runner_up) VALUES ('Uruguay', 1930, 'Uruguay', 'Argentina');
@@ -53,6 +53,172 @@ INSERT INTO worldcup(country, year, champion, runner_up) VALUES ('Brazil', 2014,
 INSERT INTO worldcup(country, year, champion, runner_up) VALUES ('Russia', 2018, 'N/A', 'N/A');
 
 
+/* 1994 WORLD CUP - USA */
+
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Romania', 'ROU', 'A', 15);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Switzerland', 'SUI', 'A', 15);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('United States', 'USA', 'A', 15);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Colombia', 'COL', 'A', 15);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Brazil', 'BRA', 'B', 15);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Sweden', 'SWE', 'B', 15);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Russia', 'RUS', 'B', 15);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Cameroon', 'CMR', 'B', 15);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Germany', 'GER', 'C', 15);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Spain', 'ESP', 'C', 15);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('South Korea', 'KOR', 'C', 15);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Bolivia', 'BOL', 'C', 15);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Nigeria', 'NGA', 'D', 15);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Bulgaria', 'BUL', 'D', 15);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Argentina', 'ARG', 'D', 15);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Greece', 'GRE', 'D', 15);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Mexico', 'MEX', 'E', 15);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Republic of Ireland', 'IRL', 'E', 15);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Italy', 'ITA', 'E', 15);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Norway', 'KOR', 'E', 15);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Netherlands', 'NED', 'F', 15);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Saudi Arabia', 'YUG', 'F', 15);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Belgium', 'BEL', 'F', 15);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Morocco', 'MAR', 'F', 15);
+
+/* 1998 WORLD CUP - FRANCE */
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Brazil', 'BRA', 'A', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Norway', 'NOR', 'A', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Morocco', 'MAR', 'A', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Scotland', 'SCO', 'A', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Italy', 'ITA', 'B', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Chile', 'CHI', 'B', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Austria', 'AUT', 'B', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Cameroon', 'CMR', 'B', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('France', 'FRA', 'C', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Denmark', 'DEN', 'C', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('South Africa', 'RSA', 'C', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Saudi Arabia', 'KSA', 'C', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Nigeria', 'NGA', 'D', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Paraguay', 'PAR', 'D', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Spain', 'ESP', 'D', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Bulgaria', 'BUL', 'D', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Netherlands', 'NED', 'E', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Mexico', 'MEX', 'E', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Belgium', 'BEL', 'E', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Korea Republic', 'KOR', 'E', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Germany', 'GER', 'F', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Yugoslavia', 'YUG', 'F', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Iran', 'IRN', 'F', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('United States', 'USA', 'F', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Romania', 'ROU', 'G', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('England', 'ENG', 'G', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Colombia', 'COL', 'G', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Tunisia', 'TUN', 'G', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Argentina', 'ARG', 'H', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Croatia', 'CRO', 'H', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Jamaica', 'JAM', 'H', 16);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Japan', 'JPN', 'H', 16);
+
+
+/* 2002 WORLD CUP - KOREA/JAPAN */
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Denmark', 'DEN', 'A', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Senegal', 'SEN', 'A', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Uruguay', 'URU', 'A', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('France', 'FRA', 'A', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Spain', 'ESP', 'B', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Paraguay', 'PAR', 'B', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('South Africa', 'RSA', 'B', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Slovenia', 'SVN', 'B', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Brazil', 'BRA', 'C', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Turkey', 'TUR', 'C', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Costa Rica', 'CRC', 'C', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('China', 'CHN', 'C', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('South Korea', 'KOR', 'D', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('United States', 'USA', 'D', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Portugal', 'POR', 'D', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Poland', 'POL', 'D', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Germany', 'GER', 'E', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Republic of Ireland', 'IRL', 'E', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Cameroon', 'CMR', 'E', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Saudi Arabia', 'KOR', 'E', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Sweden', 'SWE', 'F', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('England', 'YUG', 'F', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Argentina', 'ARG', 'F', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Nigeria', 'NGA', 'F', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Mexico', 'MEX', 'G', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Italy', 'ITA', 'G', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Croatia', 'CRO', 'G', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Ecuador', 'ECU', 'G', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Japan', 'JPN', 'H', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Belgium', 'BEL', 'H', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Russia', 'RUS', 'H', 17);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Tunisia', 'TUN', 'H', 17);
+
+
+/* 2006 WORLD CUP - GERMANY */
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Germany', 'GER', 'A', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Ecuador', 'ECU', 'A', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Poland', 'POL', 'A', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Costa Rica', 'CRC', 'A', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('England', 'ENG', 'B', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Sweden', 'SWE', 'B', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Paraguay', 'PAR', 'B', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Trinidad and Tobago', 'TRI', 'B', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Argentina', 'ARG', 'C', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Netherlands', 'NED', 'C', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Ivory Coast', 'CIV', 'C', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Serbia and Montenegro', 'SRB', 'C', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Portugal', 'POR', 'D', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Mexico', 'MEX', 'D', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Angola', 'ANG', 'D', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Iran', 'IRN', 'D', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Italy', 'ITA', 'E', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Ghana', 'GHA', 'E', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Czech Republic', 'CZE', 'E', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('United States', 'USA', 'E', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Brazil', 'BRA', 'F', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Australia', 'AUS', 'F', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Croatia', 'CRO', 'F', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Japan', 'JPN', 'F', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Switzerland', 'SUI', 'G', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('France', 'FRA', 'G', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('South Korea', 'KOR', 'G', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Togo', 'TOG', 'G', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Spain', 'ESP', 'H', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Ukraine', 'UKR', 'H', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Tunisia', 'TUN', 'H', 18);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Saudi Arabia', 'KSA', 'H', 18);
+
+
+/* 2010 WORLD CUP - SOUTH AFRICA */
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Uruguay', 'URU', 'A', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Mexico', 'MEX', 'A', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('South Africa', 'RSA', 'A', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('France', 'FRA', 'A', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Argentina', 'ARG', 'B', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('South Korea', 'KOR', 'B', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Greece', 'GRE', 'B', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Nigeria', 'NGA', 'B', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('United States', 'USA', 'C', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('England', 'ENG', 'C', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Slovenia', 'SVN', 'C', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Algeria', 'ALG', 'C', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Germany', 'GER', 'D', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Ghana', 'GHA', 'D', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Australia', 'AUS', 'D', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Serbia', 'SRB', 'D', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Netherlands', 'NED', 'E', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Japan', 'JPN', 'E', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Denmark', 'DEN', 'E', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Cameroon', 'CMR', 'E', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Paraguay', 'PAR', 'F', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Slovakia', 'SVK', 'F', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('New Zealand', 'NZL', 'F', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Italy', 'ITA', 'F', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Brazil', 'BRA', 'G', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Portugal', 'POR', 'G', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Ivory Coast', 'CIV', 'G', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('North Korea', 'PRK', 'G', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Spain', 'ESP', 'H', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Chile', 'CHI', 'H', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Switzerland', 'SUI', 'H', 19);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Honduras', 'HON', 'H', 19);
+
 /* 2014 WORLD CUP - BRAZIL */
 -- Group A
 INSERT INTO team(name, code, group_name, worldcup) VALUES ('Cameroon', 'CMR', 'A', 20);
@@ -65,10 +231,10 @@ INSERT INTO team(name, code, group_name, worldcup) VALUES ('Netherlands', 'NED',
 INSERT INTO team(name, code, group_name, worldcup) VALUES ('Australia', 'AUS', 'B', 20);
 INSERT INTO team(name, code, group_name, worldcup) VALUES ('Chile', 'CHI', 'B', 20);
 -- Group C
-INSERT INTO team(name, code, group_name, worldcup) VALUES ('Ivory Coast', 'CIV', 'B', 20);
-INSERT INTO team(name, code, group_name, worldcup) VALUES ('Japan', 'JPN', 'B', 20);
-INSERT INTO team(name, code, group_name, worldcup) VALUES ('Greece', 'GRE', 'B', 20);
-INSERT INTO team(name, code, group_name, worldcup) VALUES ('Colombia', 'COL', 'B', 20);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Ivory Coast', 'CIV', 'C', 20);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Japan', 'JPN', 'C', 20);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Greece', 'GRE', 'C', 20);
+INSERT INTO team(name, code, group_name, worldcup) VALUES ('Colombia', 'COL', 'C', 20);
 -- Group D
 INSERT INTO team(name, code, group_name, worldcup) VALUES ('Costa Rica', 'CRC', 'D', 20);
 INSERT INTO team(name, code, group_name, worldcup) VALUES ('Italy', 'ITA', 'D', 20);
