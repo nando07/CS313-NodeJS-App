@@ -9,6 +9,7 @@
   "author": "Fernando Gomez",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^2.6.1",
     "express": "^4.16.3",
     "pg": "^7.4.3"
   }
