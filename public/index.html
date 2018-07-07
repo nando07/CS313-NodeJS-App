@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WCH</title>
+
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <nav id="navigation" class="sidebar">
+         <ul>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-trophy fa-2x"></i>
+                        <span class="nav-text">
+                            Champions
+                        </span>
+                    </a>
+
+                </li>
+
+                  <li>
+                    <a href="#">
+                        <i class="fa fa-sitemap fa-2x"></i>
+                        <span class="nav-text">
+                            Knockout Stages
+                        </span>
+                    </a>
+
+                </li>
+                  <li>
+                    <a href="#">
+                        <i class="fa fa-futbol fa-2x"></i>
+                        <span class="nav-text">
+                            Top Scorers
+                        </span>
+                    </a>
+
+                </li>
+<!--
+                  <li>
+                    <a href="#">
+                        <i class="fa fa-tv fa-2x"></i>
+                        <span class="nav-text">
+                        ???
+                        </span>
+                    </a>
+
+                </li>
+                  <li>
+                    <a href="#">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                            Home
+                        </span>
+                    </a>
+
+
+                </li>
+                -->
+        </ul>
+        <a href="#" class="sidebar-toggle" onclick="addClass()"></a>
+    </nav>
+
+
+    <div id="home">Home</div>
+    <div id="cup">
+
+    <img src="wctrophy.png" class="trophy">
+    </div>
+
+    <div id="output">
+
+
+    </div>
+    <div id="search-form">
+        <form id="cform" action="/getWorldCupDetails" method="GET">
+            <select id="finalists" name="finalists">
+                <option value="1930">Uruguay - 1930</option>
+                <option value="1934">Italy - 1934</option>
+                <option value="1938">France - 1938</option>
+                <option value="1950">Brazil - 1950</option>
+                <option value="1954">Switzerland - 1954</option>
+                <option value="1958">Sweden - 1958</option>
+                <option value="1962">Chile - 1962</option>
+                <option value="1966">England - 1966</option>
+                <option value="1970">Mexico - 1970</option>
+                <option value="1974">West Germany 1974</option>
+                <option value="1978">Argentina - 1978</option>
+                <option value="1982">Spain 1982</option>
+                <option value="1986">Mexico - 1986</option>
+                <option value="1990">Italy - 1990</option>
+                <option value="1994">United States - 1994</option>
+                <option value="1998">France - 1998</option>
+                <option value="2002">South Korea and Japan - 2002</option>
+                <option value="2006">Germany - 2006</option>
+                <option value="2010">South Africa - 2010</option>
+                <option value="2014">Brazil - 2014</option>
+                <option value="2018">Russia - 2018</option>
+            </select>
+
+            <button>Retrieve data</button>
+        </form>
+    </div>
+
+
+
+<script>
+
+    function addClass() {
+    document.getElementById('navigation').classList.toggle('sidebar-open');
+}
+
+    </script>
+</body>
+</html>
