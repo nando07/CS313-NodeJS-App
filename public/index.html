@@ -158,6 +158,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
         // If not, append a JSON error object.
         if (request.status === OKAY) {
 
+             output.innerHTML = "";
             let dataObj = JSON.parse(request.responseText);
           // The most notable difference here is that vanilla JavaScript returns
           // the result of an AJAX request as a string, whereas jQuery attempts
