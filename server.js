@@ -11,6 +11,8 @@ app.set("port", (process.env.PORT || 5000));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/', (req, res) => res.render('/index'));
+
 app.get("/getWorldCupCountry", getWorldCupCountry)
 app.get("/getWorldCupChampions", getWorldCupChampions)
 app.get("/getWorldCupTeams", getWorldCupTeams)
