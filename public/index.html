@@ -149,7 +149,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
       // Do nothing until the request is finished.
       if (request.readyState === DONE) {
 
-            let dataObj = JSON.parse(request.responseText);
+        
+        
         // Create a div element to hold the output.
         var div = document.createElement('div');
 
@@ -157,10 +158,15 @@ document.addEventListener('DOMContentLoaded', function(e) {
         // If not, append a JSON error object.
         if (request.status === OKAY) {
 
+            let dataObj = JSON.parse(request.responseText);
           // The most notable difference here is that vanilla JavaScript returns
           // the result of an AJAX request as a string, whereas jQuery attempts
           // to parse JSON responses into a JSON object.
-          div.appendChild(document.createTextNode("<div>Champion: " + dataObj.champion + "</div>" + "<div>Runner-up: " + dataObj.runner_up + "</div>");
+            
+            
+            div.innerHTML = "<div>Champion: " + dataObj.champion + "</div>";
+//            });
+//          div.appendChild(document.createTextNode("<div>Champion: " + dataObj.champion + "</div>" + "<div>Runner-up: " + dataObj.runner_up + "</div>");
         } else {
           div.appendChild(document.createTextNode(JSON.stringify(ERROR)));
         }
