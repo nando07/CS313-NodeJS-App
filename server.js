@@ -1,5 +1,6 @@
 var express = require("express");
 var app = express();
+var url = require('url');
 
 const { Pool } = require("pg");
 
@@ -7,6 +8,8 @@ const connectionString = process.env.DATABASE_URL || "postgres://worldcupuser:fe
 const pool = new Pool({connectionString: connectionString});
 
 app.set("port", (process.env.PORT || 5000));
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get("/getWorldCupCountry", getWorldCupCountry)
 app.get("/getWorldCupChampions", getWorldCupChampions)
