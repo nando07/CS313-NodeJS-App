@@ -9,9 +9,9 @@ const pool = new Pool({connectionString: connectionString});
 
 app.set("port", (process.env.PORT || 5000));
 
-app.use(express.static(path.join(__dirname, 'public')));
+//app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => res.render('/index'));
+app.get('/', (req, res) => res.render('public/index'));
 
 app.get("/getWorldCupCountry", getWorldCupCountry)
 app.get("/getWorldCupChampions", getWorldCupChampions)
