@@ -1,4 +1,5 @@
 var express = require("express");
+const path = require('path');
 var app = express();
 var url = require('url');
 
@@ -9,9 +10,9 @@ const pool = new Pool({connectionString: connectionString});
 
 app.set("port", (process.env.PORT || 5000));
 
-//app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => res.render('public/index'));
+//app.get('/', (req, res) => res.render('/index'));
 
 app.get("/getWorldCupCountry", getWorldCupCountry)
 app.get("/getWorldCupChampions", getWorldCupChampions)
