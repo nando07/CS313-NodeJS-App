@@ -122,4 +122,9 @@ height: 60px;
   max-height:100vh;
 }
 
+#output {
+    font-size: 30px;
+    font-family: cursive;
+    transition: all 1s ease-in-out;
+}
 
