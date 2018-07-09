@@ -152,7 +152,7 @@ function getWorldCupDetails(req, res) {
 function getWorldCupDetailsFromDb(year, callback) {
     console.log("getting Details from DB with year ", year);
    
-    var sql = "SELECT country, year, champion, runner_up FROM worldcup WHERE year = $1::int";
+    var sql = "SELECT country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties FROM worldcup WHERE year = $1::int";
     var params = [year];
 
     pool.query(sql, params, function(err, result){
