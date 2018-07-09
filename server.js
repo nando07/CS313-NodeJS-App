@@ -147,7 +147,6 @@ function getWorldCupDetails(req, res) {
             res.json(result);
         }
     });
-    res.json(result);
 }
 function getWorldCupDetailsFromDb(year, callback) {
     console.log("getting Details from DB with year ", year);
