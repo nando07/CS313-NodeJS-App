@@ -135,6 +135,7 @@ function getWorldCupDetails(req, res) {
 
     var year = req.query.year;
     console.log("Retrieving World Cup Details for year: ", year);
+    
 //    var result = [{runner_up_code: 
 //                   "URU", champion_code: "ARG", champion: "Uruguay", runner_up: "Argentina", champion_score: 3, runner_up_score: 1}];
 
