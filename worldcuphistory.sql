@@ -5,7 +5,13 @@ CREATE TABLE worldcup
     country VARCHAR(100) NOT NULL,
     year INTEGER NOT NULL,
     champion VARCHAR(100),
-    runner_up VARCHAR(100) 
+    runner_up VARCHAR(100),
+    champion_code VARCHAR(100),
+    runner_up_code VARCHAR(100),
+    champion_score INTEGER,
+    runner_up_score INTEGER,
+    champion_penalties INTEGER,
+    runner_up_penalties INTEGER
 );
 
 CREATE TABLE team 
@@ -29,28 +35,33 @@ CREATE TABLE matches
 );
 
 
-INSERT INTO worldcup(country, year, champion, runner_up) VALUES ('Uruguay', 1930, 'Uruguay', 'Argentina');
-INSERT INTO worldcup(country, year, champion, runner_up) VALUES ('Italy', 1934, 'Italy', 'Czechoslovakia');
-INSERT INTO worldcup(country, year, champion, runner_up) VALUES ('France', 1938, 'Italy', 'Hungary');
-INSERT INTO worldcup(country, year, champion, runner_up) VALUES ('Brazil', 1950, 'Uruguay', 'Brazil');
-INSERT INTO worldcup(country, year, champion, runner_up) VALUES ('Switzerland', 1954, 'West Germany', 'Hungary');
-INSERT INTO worldcup(country, year, champion, runner_up) VALUES ('Sweden', 1958, 'Brazil', 'Sweden');
-INSERT INTO worldcup(country, year, champion, runner_up) VALUES ('Chile', 1962, 'Brazil', 'Czechoslovakia');
-INSERT INTO worldcup(country, year, champion, runner_up) VALUES ('England', 1966, 'England', 'West Germany');
-INSERT INTO worldcup(country, year, champion, runner_up) VALUES ('Mexico', 1970, 'Brazil', 'Italy');
-INSERT INTO worldcup(country, year, champion, runner_up) VALUES ('West Germany', 1974, 'West Germany', 'Netherlands');
-INSERT INTO worldcup(country, year, champion, runner_up) VALUES ('Argentina', 1978, 'Argentina', 'Netherlands');
-INSERT INTO worldcup(country, year, champion, runner_up) VALUES ('Spain', 1982, 'Italy', 'West Germany');
-INSERT INTO worldcup(country, year, champion, runner_up) VALUES ('Mexico', 1986, 'Argentina', 'West Germany');
-INSERT INTO worldcup(country, year, champion, runner_up) VALUES ('Italy', 1990, 'West Germany', 'Argentina');
-INSERT INTO worldcup(country, year, champion, runner_up) VALUES ('United States', 1994, 'Brazil', 'Italy');
-INSERT INTO worldcup(country, year, champion, runner_up) VALUES ('France', 1998, 'France', 'Brazil');
-INSERT INTO worldcup(country, year, champion, runner_up) VALUES ('South Korea and Japan', 2002, 'Brazil', 'Germany');
-INSERT INTO worldcup(country, year, champion, runner_up) VALUES ('Germany', 2006, 'Italy', 'France');
-INSERT INTO worldcup(country, year, champion, runner_up) VALUES ('South Africa', 2010, 'Spain', 'Netherlands');
-INSERT INTO worldcup(country, year, champion, runner_up) VALUES ('Brazil', 2014, 'Germany', 'Argentina');
-INSERT INTO worldcup(country, year, champion, runner_up) VALUES ('Russia', 2018, 'N/A', 'N/A');
+-- INSERT INTO matches(match_date, match_type, home_team, away_team, home_team_goals, away_team_goals) VALUES ('07/30/1930', 'final', )
 
+INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('Uruguay', 1930, 'Uruguay', 'Argentina', 'URU', 'ARG', 4, 2, NULL, NULL);
+INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('Italy', 1934, 'Italy', 'Czechoslovakia', 'ITA', 'CZE', 2, 1, NULL, NULL);
+INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('France', 1938, 'Italy', 'Hungary', 'ITA', 'HUN', 4, 2, NULL, NULL);
+INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('Brazil', 1950, 'Uruguay', 'Brazil', 'URU', 'BRA', 2, 1, NULL, NULL);
+INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('Switzerland', 1954, 'West Germany', 'Hungary', 'GER', 'HUN', 3, 2, NULL, NULL);
+INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('Sweden', 1958, 'Brazil', 'Sweden', 'BRA', 'SWE', 5, 2, NULL, NULL);
+INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('Chile', 1962, 'Brazil', 'Czechoslovakia', 'BRA', 'CZE', 3, 1, NULL, NULL);
+INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('England', 1966, 'England', 'West Germany', 'ENG', 'GER', 4, 2, NULL, NULL);
+INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('Mexico', 1970, 'Brazil', 'Italy', 'BRA', 'ITA', 4, 1, NULL, NULL);
+INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('West Germany', 1974, 'West Germany', 'Netherlands', 'GER', 'NED', 2, 1, NULL, NULL);
+INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('Argentina', 1978, 'Argentina', 'Netherlands', 'ARG', 'NED', 3, 1, NULL, NULL);
+INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('Spain', 1982, 'Italy', 'West Germany', 'ITA', 'GER', 3, 1, NULL, NULL);
+INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('Mexico', 1986, 'Argentina', 'West Germany', 'ARG', 'GER', 3, 2, NULL, NULL);
+INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('Italy', 1990, 'West Germany', 'Argentina', 'GER', 'ARG', 1, 0, NULL, NULL);
+INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('United States', 1994, 'Brazil', 'Italy', 'BRA', 'ITA', 0, 0, 3, 2);
+INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('France', 1998, 'France', 'Brazil', 'FRA', 'BRA', 3, 0, NULL, NULL);
+INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('South Korea and Japan', 2002, 'Brazil', 'Germany', 'BRA', 'GER', 2, 0, NULL, NULL);
+INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('Germany', 2006, 'Italy', 'France', 'ITA', 'FRA', 1, 1, 5, 3);
+INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('South Africa', 2010, 'Spain', 'Netherlands', 'ESP', 'NED', 1, 0, NULL, NULL);
+INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('Brazil', 2014, 'Germany', 'Argentina', 'GER', 'ARG', 1, 0, NULL, NULL);
+INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('Russia', 2018, 'N/A', 'N/A', 'N/A','N/A', NULL, NULL, NULL, NULL);
+
+
+/* 1930 - URUGUAY */
+-- INSERT INTO team(name, code, group_name, worldcup) VALUES ('URUGUAY', 'URU', 'C', 1);
 
 /* 1994 WORLD CUP - USA */
 
