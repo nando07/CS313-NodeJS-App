@@ -134,7 +134,7 @@ height: 60px;
 /* Home Team Area */
 
 #main-container{
-      border: 1px solid red;
+/*      border: 1px solid red;*/
         text-align: center;
     max-width: 100vw;
     height: auto;
@@ -144,12 +144,12 @@ height: 60px;
 }
 
 #cup {
-    border: 1px solid blue;
+/*    border: 1px solid blue;*/
 }
 
 
 img {
-    border: 1px solid black;
+/*    border: 1px solid black;*/
 }
 #home-team {
     border: 1px solid;
