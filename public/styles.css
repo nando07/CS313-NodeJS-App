@@ -124,6 +124,7 @@ height: 60px;
 
 .flags {
     max-width: 100%;
+     border: 1px solid black;
 }
 #output {
     font-size: 30px;
@@ -149,7 +150,7 @@ height: 60px;
 
 
 img {
-    border: 1px solid black;
+/*    border: 1px solid black;*/
 }
 #home-team {
 /*    border: 1px solid;*/
