@@ -149,14 +149,14 @@ height: 60px;
 
 
 img {
-/*    border: 1px solid black;*/
+    border: 1px solid black;
 }
 #home-team {
-    border: 1px solid;
+/*    border: 1px solid;*/
 }
 
 #away-team {
-    border: 1px solid;
+/*    border: 1px solid;*/
 }
 
 .column {
