@@ -14,7 +14,7 @@
 
     <nav id="navigation" class="sidebar">
         <ul>
-            <li>
+            <li onmouseover="trophyIn()" onmouseout="trophyOut()">
                 <a href="#">
                         <i class="fa fa-trophy fa-2x"></i>
                         <span class="nav-text">
@@ -24,7 +24,7 @@
 
             </li>
 
-            <li>
+            <li onmouseover="bracketIn()" onmouseout="bracketOut()">
                 <a href="#">
                         <i class="fa fa-sitemap fa-2x"></i>
                         <span class="nav-text">
@@ -33,7 +33,7 @@
                     </a>
 
             </li>
-            <li>
+            <li  onmouseover="scorerIn()" onmouseout="scorerOut()">
                 <a href="#">
                         <i class="fa fa-futbol fa-2x"></i>
                         <span class="nav-text">
@@ -80,6 +80,7 @@
                 </div>
                 <div id="home-country-code"></div>
                 <div id="home-country-flag">
+                   <!-- Add div to keep flag space so that changing between final scores creates a smoother transition intead of seeing the scores ocupying the flag space for milliseconds. -->
                     <!--            <img src="countryFlags/ARG.png" class="flags">-->
                 </div>
                 <div id="home-score"></div>
@@ -146,6 +147,37 @@
 
 
     <script>
+        
+        function trophyIn() {
+        var t = document.getElementsByClassName('fa-trophy')[0];
+            t.style.webkitTransform = 'rotate(360deg)';
+        }
+        
+        function trophyOut() {
+        var t = document.getElementsByClassName('fa-trophy')[0];
+            t.style.webkitTransform = 'rotate(0deg)';
+        }
+        
+        function bracketIn() {
+        var t = document.getElementsByClassName('fa-sitemap')[0];
+            t.style.webkitTransform = 'rotate(90deg)';
+        }
+        
+        function bracketOut() {
+        var t = document.getElementsByClassName('fa-sitemap')[0];
+            t.style.webkitTransform = 'rotate(0deg)';
+        }
+        
+        function scorerIn() {
+        var t = document.getElementsByClassName('fa-futbol')[0];
+            t.style.webkitTransform = 'rotate(360deg)';
+        }
+        
+        function scorerOut() {
+        var t = document.getElementsByClassName('fa-futbol')[0];
+            t.style.webkitTransform = 'rotate(0deg)';
+        }
+        
         function addClass() {
             document.getElementById('navigation').classList.toggle('sidebar-open');
         }
@@ -247,13 +279,6 @@
                             div.appendChild(document.createTextNode(JSON.stringify(ERROR)));
                         }
 
-                        //                        setTimeout(function() {
-                        //                             
-                        //                            
-                        //                        }, 500);
-
-                        //                        s.style.WebkitTransitionDelay = "2s";
-                        //                        s.style.display = "none";
                         // Append the div to the output container.
                         output.appendChild(div);
                     }

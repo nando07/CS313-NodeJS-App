@@ -21,6 +21,11 @@ vertical-align:middle;
     font-size: 20px;
 }
 
+.fa-trophy, .fa-sitemap, .fa-futbol {
+         -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+} 
+
 .sidebar li {
 position:relative;
 display:block;
