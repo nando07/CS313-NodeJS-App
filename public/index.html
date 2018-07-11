@@ -85,7 +85,7 @@
                 <div id="home-score"></div>
             </div>
         </div>
-        
+
         <div class="column" id="cup">
             <img src="wctrophy.png" class="trophy">
         </div>
@@ -108,13 +108,13 @@
             </div>
         </div>
     </div>
-        <div id="output">
+    <div id="output">
 
 
-        </div>
-        <div id="search-form">
-            <form id="cform" action="/getWorldCupDetails" method="GET">
-                <select id="finalists" name="year">
+    </div>
+    <div id="search-form">
+        <form id="cform" action="/getWorldCupDetails" method="GET">
+            <select id="finalists" name="year">
                 <option value="1930">Uruguay - 1930</option>
                 <option value="1934">Italy - 1934</option>
                 <option value="1938">France - 1938</option>
@@ -138,154 +138,155 @@
                 <option value="2018">Russia - 2018</option>
             </select>
 
-                <button>Retrieve data</button>
-            </form>
-        </div>
+            <button>Retrieve data</button>
+        </form>
+    </div>
 
 
 
 
-        <script>
-            function addClass() {
-                document.getElementById('navigation').classList.toggle('sidebar-open');
-            }
+    <script>
+        function addClass() {
+            document.getElementById('navigation').classList.toggle('sidebar-open');
+        }
 
-            // Constants used during the AJAX request.
-            const DONE = 4;
-            const OKAY = 200;
-            const ERROR = {
-                "message": "The request failed!"
-            };
+        // Constants used during the AJAX request.
+        const DONE = 4;
+        const OKAY = 200;
+        const ERROR = {
+            "message": "The request failed!"
+        };
 
-            // Wait for the document to load before binding event handlers further.
-            document.addEventListener('DOMContentLoaded', function(e) {
+        // Wait for the document to load before binding event handlers further.
+        document.addEventListener('DOMContentLoaded', function(e) {
 
-                // Obtain programmatic reference to the important elements of the page.
-                var cform = document.getElementById('cform'),
-                    finalists = document.getElementById('finalists'),
-                    output = document.getElementById('output'),
-                    homeTeam = document.getElementById('home-country-code'),
-                    awayTeam = document.getElementById('away-country-code'),
-                    homeScore = document.getElementById('home-score'),
-                    awayScore = document.getElementById('away-score'),
-                    homeFlag = document.getElementById('home-country-flag'),
-                    awayFlag = document.getElementById('away-country-flag');
+            // Obtain programmatic reference to the important elements of the page.
+            var cform = document.getElementById('cform'),
+                finalists = document.getElementById('finalists'),
+                output = document.getElementById('output'),
+                homeTeam = document.getElementById('home-country-code'),
+                awayTeam = document.getElementById('away-country-code'),
+                homeScore = document.getElementById('home-score'),
+                awayScore = document.getElementById('away-score'),
+                homeFlag = document.getElementById('home-country-flag'),
+                awayFlag = document.getElementById('away-country-flag');
 
-                var a = document.getElementById('loaderA');
-                var b = document.getElementById('loaderB');
-                
-                var hTeamBox = document.getElementById('home-team');
-                var aTeamBox = document.getElementById('away-team');
+            var a = document.getElementById('loaderA');
+            var b = document.getElementById('loaderB');
 
-
-
-                // Listen for submission events on the example form.
-                cform.addEventListener('submit', function(e) {
-
-                    // Programmatically prevent the form from submitting.
-                    e.preventDefault();
-
-                    // Create a new XMLHttpRequest object and resolve the target URI.
-                    var request = new XMLHttpRequest(),
-                        target = '/getWorldCupDetails?year=' + finalists.value;
-
-                    // Open and send a GET request to the target URI.
-                    request.open('GET', target);
-                    //                s.style.WebkitTransitionDelay = "2s";
-                     setTimeout(function() {
-                                      a.style.display = "table";
-                    b.style.display = "table";  
-                                
-                                }, 200);
-                  
-                    
-                        output.innerHTML = "";
-                                homeTeam.innerHTML = "";
-                                awayTeam.innerHTML = "";
-                                homeFlag.innerHTML = "";
-                                awayFlag.innerHTML = "";
-                                homeScore.innerHTML = "";
-                                    awayScore.innerHTML = "";
-
-                    hTeamBox.style.opacity = '0';
-                    aTeamBox.style.opacity = '0';
-
-                    request.send();
-
-                    // Listen for changes to the XMLHttpRequest's readyState.
-                    request.onreadystatechange = function() {
-
-                        // Do nothing until the request is finished.
-                        if (request.readyState === DONE) {
-
-                            // Create a div element to hold the output.
-                            var div = document.createElement('div');
-
-                            // If the request was successful, append the response.
-                            // If not, append a JSON error object.
-                            if (request.status === OKAY) {
-
-//                                setTimeout(function() { 
-                                
-                                
-                                
-//                                 hTeamBox.style.opacity = '0';
-                                
-//                                setTimeout(function() {
-//                                    
-//                                    output.innerHTML = "";
-//                                homeTeam.innerHTML = "";
-//                                awayTeam.innerHTML = "";
-//                                homeFlag.innerHTML = "";
-//                                awayFlag.innerHTML = "";
-//                                homeScore.innerHTML = "";
-//                                    awayScore.innerHTML = "";
-//                                }, 800);
-//                                }, )
-
-                                setTimeout(function() {
-
-                                    let dataObj = JSON.parse(request.responseText);
-                                    // The most notable difference here is that vanilla JavaScript returns
-                                    // the result of an AJAX request as a string, whereas jQuery attempts
-                                    // to parse JSON responses into a JSON object.
-                                    //            div.style.fontSize = "30px";
-                                    //            div.style.fontWeight = "300";
-                                    //            div.style.fontFamily = "fantasy";
+            var hTeamBox = document.getElementById('home-team');
+            var aTeamBox = document.getElementById('away-team');
 
 
-                                    a.style.display = "none";
-                                    b.style.display = "none";
 
-                                    homeTeam.innerHTML = dataObj[0].champion_code;
-                                    awayTeam.innerHTML = dataObj[0].runner_up_code;
+            // Listen for submission events on the example form.
+            cform.addEventListener('submit', function(e) {
 
-                                    homeFlag.innerHTML = "<img src='countryFlags/" + dataObj[0].champion_code + ".png'" + "class='flags'>";
-                                    awayFlag.innerHTML = "<img src='countryFlags/" + dataObj[0].runner_up_code + ".png'" + "class='flags'>";
+                // Programmatically prevent the form from submitting.
+                e.preventDefault();
+ setTimeout(function() {
+                    a.style.display = "table";
+                    b.style.display = "table";
+                }, 200);
+                // Create a new XMLHttpRequest object and resolve the target URI.
+                var request = new XMLHttpRequest(),
+                    target = '/getWorldCupDetails?year=' + finalists.value;
 
-                                    div.innerHTML = "<div>Champion: " + dataObj[0].champion + "</div><div>Runner-up: " + dataObj[0].runner_up + "</div>";
+                // Open and send a GET request to the target URI.
+                request.open('GET', target);
+//                setTimeout(function() {
+//                    a.style.display = "table";
+//                    b.style.display = "table";
+//                }, 200);
 
-                                    homeScore.innerHTML = dataObj[0].champion_score;
-                                    awayScore.innerHTML = dataObj[0].runner_up_score;
-                                     hTeamBox.style.opacity = '1';
-                                    aTeamBox.style.opacity = '1';
-                                    //            });
-                                    //          div.appendChild(document.createTextNode("<div>Champion: " + dataObj.champion + "</div>" + "<div>Runner-up: " + dataObj.runner_up + "</div>");
-                                }, 1000);
-                            } else {
-                                div.appendChild(document.createTextNode(JSON.stringify(ERROR)));
-                            }
 
-                            //                        s.style.WebkitTransitionDelay = "2s";
-                            //                        s.style.display = "none";
-                            // Append the div to the output container.
-                                                    output.appendChild(div);
+                output.innerHTML = "";
+                homeTeam.innerHTML = "";
+                awayTeam.innerHTML = "";
+                homeFlag.innerHTML = "";
+                awayFlag.innerHTML = "";
+                homeScore.innerHTML = "";
+                awayScore.innerHTML = "";
+
+                hTeamBox.style.opacity = '0';
+                aTeamBox.style.opacity = '0';
+
+                request.send();
+
+                // Listen for changes to the XMLHttpRequest's readyState.
+                request.onreadystatechange = function() {
+
+                    // Do nothing until the request is finished.
+                    if (request.readyState === DONE) {
+
+                        // Create a div element to hold the output.
+                        var div = document.createElement('div');
+
+                        // If the request was successful, append the response.
+                        // If not, append a JSON error object.
+                        if (request.status === OKAY) {
+
+                            //                                setTimeout(function() { 
+
+
+
+                            //                                 hTeamBox.style.opacity = '0';
+
+                            //                                setTimeout(function() {
+                            //                                    
+                            //                                    output.innerHTML = "";
+                            //                                homeTeam.innerHTML = "";
+                            //                                awayTeam.innerHTML = "";
+                            //                                homeFlag.innerHTML = "";
+                            //                                awayFlag.innerHTML = "";
+                            //                                homeScore.innerHTML = "";
+                            //                                    awayScore.innerHTML = "";
+                            //                                }, 800);
+                            //                                }, )
+
+                            setTimeout(function() {
+
+                                let dataObj = JSON.parse(request.responseText);
+                                // The most notable difference here is that vanilla JavaScript returns
+                                // the result of an AJAX request as a string, whereas jQuery attempts
+                                // to parse JSON responses into a JSON object.
+                                //            div.style.fontSize = "30px";
+                                //            div.style.fontWeight = "300";
+                                //            div.style.fontFamily = "fantasy";
+
+
+                                a.style.display = "none";
+                                b.style.display = "none";
+
+                                homeTeam.innerHTML = dataObj[0].champion_code;
+                                awayTeam.innerHTML = dataObj[0].runner_up_code;
+
+                                homeFlag.innerHTML = "<img src='countryFlags/" + dataObj[0].champion_code + ".png'" + "class='flags'>";
+                                awayFlag.innerHTML = "<img src='countryFlags/" + dataObj[0].runner_up_code + ".png'" + "class='flags'>";
+
+                                div.innerHTML = "<div>Champion: " + dataObj[0].champion + "</div><div>Runner-up: " + dataObj[0].runner_up + "</div>";
+
+                                homeScore.innerHTML = dataObj[0].champion_score;
+                                awayScore.innerHTML = dataObj[0].runner_up_score;
+                                hTeamBox.style.opacity = '1';
+                                aTeamBox.style.opacity = '1';
+                                //            });
+                                //          div.appendChild(document.createTextNode("<div>Champion: " + dataObj.champion + "</div>" + "<div>Runner-up: " + dataObj.runner_up + "</div>");
+                            }, 1000);
+                        } else {
+                            div.appendChild(document.createTextNode(JSON.stringify(ERROR)));
                         }
-                    };
-                });
-            });
 
-        </script>
+                        //                        s.style.WebkitTransitionDelay = "2s";
+                        //                        s.style.display = "none";
+                        // Append the div to the output container.
+                        output.appendChild(div);
+                    }
+                };
+            });
+        });
+
+    </script>
 </body>
 
 </html>
