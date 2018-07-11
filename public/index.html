@@ -246,21 +246,16 @@
                             //                                    awayScore.innerHTML = "";
                             //                                }, 800);
                             //                                }, )
+                            
+                                                        setTimeout(function() {
+                    a.style.display = "none";
+                    b.style.display = "none";
+                }, 200);
 
                             setTimeout(function() {
 
                                 let dataObj = JSON.parse(request.responseText);
-                                // The most notable difference here is that vanilla JavaScript returns
-                                // the result of an AJAX request as a string, whereas jQuery attempts
-                                // to parse JSON responses into a JSON object.
-                                //            div.style.fontSize = "30px";
-                                //            div.style.fontWeight = "300";
-                                //            div.style.fontFamily = "fantasy";
-
-
-                                a.style.display = "none";
-                                b.style.display = "none";
-
+                             
                                 homeTeam.innerHTML = dataObj[0].champion_code;
                                 awayTeam.innerHTML = dataObj[0].runner_up_code;
 
