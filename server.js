@@ -136,18 +136,20 @@ function getWorldCupDetails(req, res) {
     var year = req.query.year;
     console.log("Retrieving World Cup Details for year: ", year);
     
-//    var result = [{runner_up_code: 
-//                   "URU", champion_code: "ARG", champion: "Uruguay", runner_up: "Argentina", champion_score: 3, runner_up_score: 1}];
+    var result = [{runner_up_code: 
+                   "URU", champion_code: "ARG", champion: "Uruguay", runner_up: "Argentina", champion_score: 3, runner_up_score: 1}];
 
 
-    getWorldCupDetailsFromDb(year, function(error, result) {
-        console.log("Got data back from DB with result:", result);
-        if (error || result == null) {
-            res.status(500).json({success:false, data: error});
-        } else {
-            res.json(result);
-        }
-    });
+//    getWorldCupDetailsFromDb(year, function(error, result) {
+//        console.log("Got data back from DB with result:", result);
+//        if (error || result == null) {
+//            res.status(500).json({success:false, data: error});
+//        } else {
+//            res.json(result);
+//        }
+//    });
+    
+    res.json(result);
 }
 function getWorldCupDetailsFromDb(year, callback) {
     console.log("getting Details from DB with year ", year);

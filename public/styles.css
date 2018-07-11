@@ -186,3 +186,65 @@ img {
     box-sizing: border-box;
 }
 
+/* change font size to change size */
+
+#home-team, #away-team {
+/*        border: 1px solid black;*/
+    opacity: .3;
+    -webkit-transition: all .8s; /* For Safari 3.1 to 6.0 */
+    transition: all .8s;
+
+}
+
+#loaderA, #loaderB {
+  font-size: 20px;
+  position: relative;
+  width: 4em;
+  height: 1em;
+  margin: 100px auto;
+  display: none;
+}
+
+.dot {
+  width: 1em;
+  height: 1em;
+  border-radius: 0.5em;
+  background: red;
+  position: absolute;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+.dot1, .dot2 {
+  left: 0;
+}
+
+.dot3 { left: 1.5em; }
+
+.dot4 { left: 3em; }
+
+@keyframes reveal {
+  from { transform: scale(0.001); }
+  to { transform: scale(1); }
+}
+
+@keyframes slide {
+  to { transform: translateX(1.5em) }
+}
+
+
+.dot1 {
+  animation-name: reveal;
+}
+
+.dot2, .dot3 {
+  animation-name: slide;
+}
+
+.dot4 {
+  animation-name: reveal;
+  animation-direction: reverse; /* thx @HugoGiraudel */
+}
+
+
