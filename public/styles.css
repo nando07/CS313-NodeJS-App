@@ -191,8 +191,8 @@ img {
 #home-team, #away-team {
 /*        border: 1px solid black;*/
     opacity: .3;
-    -webkit-transition: all 1s; /* For Safari 3.1 to 6.0 */
-    transition: all 1s;
+    -webkit-transition: all 1.5s; /* For Safari 3.1 to 6.0 */
+    transition: all 1.5s;
 
 }
 
