@@ -271,8 +271,12 @@
                         } else {
                             div.appendChild(document.createTextNode(JSON.stringify(ERROR)));
                         }
-                         hTeamBox.style.opacity = '1';
+                        
+                        setTimeout(function() {
+                              hTeamBox.style.opacity = '1';
                                 aTeamBox.style.opacity = '1';
+                            
+                        }, 500);
 
                         //                        s.style.WebkitTransitionDelay = "2s";
                         //                        s.style.display = "none";
