@@ -181,16 +181,11 @@
 
             // Listen for submission events on the example form.
             cform.addEventListener('submit', function(e) {
-                 
+
 
                 // Programmatically prevent the form from submitting.
                 e.preventDefault();
-                a.style.display = "table";
-                 b.style.display = "table";
-// setTimeout(function() {
-//                    a.style.display = "table";
-//                    b.style.display = "table";
-//                }, 200);
+
                 // Create a new XMLHttpRequest object and resolve the target URI.
                 var request = new XMLHttpRequest(),
                     target = '/getWorldCupDetails?year=' + finalists.value;
@@ -198,7 +193,8 @@
                 // Open and send a GET request to the target URI.
                 request.open('GET', target);
 
-
+                a.style.display = "table";
+                b.style.display = "table";
 
                 output.innerHTML = "";
                 homeTeam.innerHTML = "";
@@ -226,36 +222,12 @@
                         // If not, append a JSON error object.
                         if (request.status === OKAY) {
 
-                            //                                setTimeout(function() { 
-
-
-
-                            //                                 hTeamBox.style.opacity = '0';
-
-                            //                                setTimeout(function() {
-                            //                                    
-                            //                                    output.innerHTML = "";
-                            //                                homeTeam.innerHTML = "";
-                            //                                awayTeam.innerHTML = "";
-                            //                                homeFlag.innerHTML = "";
-                            //                                awayFlag.innerHTML = "";
-                            //                                homeScore.innerHTML = "";
-                            //                                    awayScore.innerHTML = "";
-                            //                                }, 800);
-                            //                                }, )
-                            
-//                                            setTimeout(function() {
-//    
-//                }, 900);
-
-
-    
 
                             setTimeout(function() {
-  a.style.display = "none";
-                    b.style.display = "none";
+                                a.style.display = "none";
+                                b.style.display = "none";
                                 let dataObj = JSON.parse(request.responseText);
-                             
+
                                 homeTeam.innerHTML = dataObj[0].champion_code;
                                 awayTeam.innerHTML = dataObj[0].runner_up_code;
 
@@ -266,19 +238,19 @@
 
                                 homeScore.innerHTML = dataObj[0].champion_score;
                                 awayScore.innerHTML = dataObj[0].runner_up_score;
-                                
-                                 hTeamBox.style.opacity = '1';
+
+                                hTeamBox.style.opacity = '1';
                                 aTeamBox.style.opacity = '1';
 
                             }, 1000);
                         } else {
                             div.appendChild(document.createTextNode(JSON.stringify(ERROR)));
                         }
-                        
-//                        setTimeout(function() {
-//                             
-//                            
-//                        }, 500);
+
+                        //                        setTimeout(function() {
+                        //                             
+                        //                            
+                        //                        }, 500);
 
                         //                        s.style.WebkitTransitionDelay = "2s";
                         //                        s.style.display = "none";
