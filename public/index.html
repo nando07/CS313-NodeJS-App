@@ -181,11 +181,12 @@
 
             // Listen for submission events on the example form.
             cform.addEventListener('submit', function(e) {
-                 a.style.display = "table";
-                 b.style.display = "table";
+                 
 
                 // Programmatically prevent the form from submitting.
                 e.preventDefault();
+                a.style.display = "table";
+                 b.style.display = "table";
 // setTimeout(function() {
 //                    a.style.display = "table";
 //                    b.style.display = "table";
