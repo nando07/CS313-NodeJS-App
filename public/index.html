@@ -244,16 +244,18 @@
                             //                                }, 800);
                             //                                }, )
                             
-                                            setTimeout(function() {
-      a.style.display = "none";
-                    b.style.display = "none";
-                }, 900);
+//                                            setTimeout(function() {
+//      a.style.display = "none";
+//                    b.style.display = "none";
+//                }, 900);
 
    
     
 
                             setTimeout(function() {
 
+                                a.style.display = "table";
+                 b.style.display = "table";
                                 let dataObj = JSON.parse(request.responseText);
                              
                                 homeTeam.innerHTML = dataObj[0].champion_code;
