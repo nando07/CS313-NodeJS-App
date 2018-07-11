@@ -181,13 +181,15 @@
 
             // Listen for submission events on the example form.
             cform.addEventListener('submit', function(e) {
+                 a.style.display = "table";
+                 b.style.display = "table";
 
                 // Programmatically prevent the form from submitting.
-                e.preventDefault();
- setTimeout(function() {
-                    a.style.display = "table";
-                    b.style.display = "table";
-                }, 200);
+//                e.preventDefault();
+// setTimeout(function() {
+//                    a.style.display = "table";
+//                    b.style.display = "table";
+//                }, 200);
                 // Create a new XMLHttpRequest object and resolve the target URI.
                 var request = new XMLHttpRequest(),
                     target = '/getWorldCupDetails?year=' + finalists.value;
