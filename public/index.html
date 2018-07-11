@@ -193,8 +193,7 @@
                 // Open and send a GET request to the target URI.
                 request.open('GET', target);
 
-                a.style.display = "table";
-                b.style.display = "table";
+
 
                 output.innerHTML = "";
                 homeTeam.innerHTML = "";
@@ -214,7 +213,8 @@
 
                     // Do nothing until the request is finished.
                     if (request.readyState === DONE) {
-
+                        a.style.display = "table";
+                        b.style.display = "table";
                         // Create a div element to hold the output.
                         var div = document.createElement('div');
 
