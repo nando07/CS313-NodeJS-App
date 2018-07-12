@@ -182,7 +182,7 @@ img {
 
 #home-country-code, #away-country-code, #home-score, #away-score {
 
-    font-family: cursive;
+    font-family: 'Righteous', cursive;
     font-size: 4vw;
     font-weight: 900;
     text-transform: uppercase;
