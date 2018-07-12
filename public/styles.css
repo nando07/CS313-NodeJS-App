@@ -133,7 +133,7 @@ height: 60px;
 }
 #output {
     font-size: 30px;
-    font-family: cursive;
+   font-family: 'Righteous', cursive;
     transition: all 1s ease-in-out;
 }
 
