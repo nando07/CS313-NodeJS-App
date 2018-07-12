@@ -211,10 +211,8 @@
 
             // Listen for submission events on the example form.
             cform.addEventListener('submit', function(e) {
-                
-                var sideBar = document.getElementById('navigation').classList.contains('sidebar-open');
-             
-                if (sideBar){
+                 
+                if (document.getElementById('navigation').classList.contains('sidebar-open')){
                     addClass();
                 }
                  
