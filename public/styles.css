@@ -77,9 +77,6 @@ vertical-align:middle;
   overflow:hidden;
   display:inline-block;
   opacity: 0;
-  animation:show 1.5s ease-out infinite alternate;
-  -webkit-animation:show 1.5s ease-out infinite alternate;
-  font-size:$size;
   font-style:italic;
   position:absolute;
   color:#d20a11;
@@ -87,7 +84,28 @@ vertical-align:middle;
 }
 
 .check.check-on {
-  opacity: 1;
+   animation:show 0.8s forwards;
+  -webkit-animation:show 0.8s forwards;
+}
+
+@keyframes show{
+    0%{
+      opacity:0;
+    }
+    100%{
+      opacity:1;
+    }
+}
+
+@-webkit-keyframes show{
+    0%{
+    
+      opacity:0;
+    }
+    100%{
+    
+      opacity:1;
+    }
 }
 
 .sidebar {
