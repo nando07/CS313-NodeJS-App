@@ -16,31 +16,34 @@
 
     <nav id="navigation" class="sidebar">
         <ul>
-            <li onmouseover="trophyIn()" onmouseout="trophyOut()">
+            <li onmouseover="trophyIn()" onmouseout="trophyOut()" onclick="selectChampion()">
                 <a href="#">
                         <i class="fa fa-trophy fa-2x"></i>
                         <span class="nav-text">
                             Champions
                         </span>
+                        <div id="champion" class="check">&#x2713;</div>
                     </a>
 
             </li>
 
-            <li onmouseover="bracketIn()" onmouseout="bracketOut()">
+            <li onmouseover="bracketIn()" onmouseout="bracketOut()" onclick="selectBracket()">
                 <a href="#">
                         <i class="fa fa-sitemap fa-2x"></i>
                         <span class="nav-text">
                             Knockout Stages
                         </span>
+                        <div id="bracket" class="check">&#x2713;</div>
                     </a>
 
             </li>
-            <li  onmouseover="scorerIn()" onmouseout="scorerOut()">
+            <li  onmouseover="scorerIn()" onmouseout="scorerOut()"  onclick="selectScorer()">
                 <a href="#">
                         <i class="fa fa-futbol fa-2x"></i>
                         <span class="nav-text">
                             Top Scorers
                         </span>
+                        <div id="scorer" class="check">&#x2713;</div>
                     </a>
 
             </li>
@@ -147,32 +150,85 @@
 
     <script>
         
+        function selectChampion() {
+           
+            
+            if (document.getElementById('bracket').classList.contains('check-on')) {
+                selectBracket();
+            }
+            if (document.getElementById('scorer').classList.contains('check-on')) {
+            
+                selectScorer();
+            }
+            document.getElementById('champion').classList.toggle('check-on');
+        }
+        
+        function selectBracket() {
+            
+            
+            if (document.getElementById('champion').classList.contains('check-on')) {
+                
+                 selectChampion();
+                
+            } 
+            if (document.getElementById('scorer').classList.contains('check-on')) 
+            {
+                selectScorer();
+            }
+            document.getElementById('bracket').classList.toggle('check-on');
+        }
+        
+        function selectScorer() {
+            
+            
+            if (document.getElementById('champion').classList.contains('check-on')) {
+                selectChampion();
+            } 
+            if (document.getElementById('bracket').classList.contains('check-on')) {
+                selectBracket();
+            }
+            document.getElementById('scorer').classList.toggle('check-on');
+        }
+        
+        
         function trophyIn() {
         var t = document.getElementsByClassName('fa-trophy')[0];
+            var check = document.getElementsByClassName('check')[0];
+            check.style.color = 'white';
             t.style.webkitTransform = 'rotate(360deg)';
         }
         
         function trophyOut() {
+            var check = document.getElementsByClassName('check')[0];
+            check.style.color = '#d20a11';
         var t = document.getElementsByClassName('fa-trophy')[0];
             t.style.webkitTransform = 'rotate(0deg)';
         }
         
         function bracketIn() {
         var t = document.getElementsByClassName('fa-sitemap')[0];
+            var check = document.getElementsByClassName('check')[1];
+             check.style.color = 'white';
             t.style.webkitTransform = 'rotate(90deg)';
         }
         
         function bracketOut() {
+            var check = document.getElementsByClassName('check')[1];
+            check.style.color = '#d20a11';
         var t = document.getElementsByClassName('fa-sitemap')[0];
             t.style.webkitTransform = 'rotate(0deg)';
         }
         
         function scorerIn() {
         var t = document.getElementsByClassName('fa-futbol')[0];
+              var check = document.getElementsByClassName('check')[2];
+             check.style.color = 'white';
             t.style.webkitTransform = 'rotate(360deg)';
         }
         
         function scorerOut() {
+            var check = document.getElementsByClassName('check')[2];
+            check.style.color = '#d20a11';
         var t = document.getElementsByClassName('fa-futbol')[0];
             t.style.webkitTransform = 'rotate(0deg)';
         }

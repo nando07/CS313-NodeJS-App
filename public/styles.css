@@ -60,10 +60,34 @@ ul {
 position:relative;
 display:table-cell;
 vertical-align:middle;
-width:250px;
+width:120px;
 height: 60px;
+}
 
+.sidebar .check {
+    position:relative;
+    text-align: center;
+display:table-cell;
+vertical-align:middle;
+    width:50px;
+}
 
+.check {
+/*    width:0;*/
+  overflow:hidden;
+  display:inline-block;
+  opacity: 0;
+  animation:show 1.5s ease-out infinite alternate;
+  -webkit-animation:show 1.5s ease-out infinite alternate;
+  font-size:$size;
+  font-style:italic;
+  position:absolute;
+  color:#d20a11;
+    
+}
+
+.check.check-on {
+  opacity: 1;
 }
 
 .sidebar {
