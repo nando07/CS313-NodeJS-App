@@ -169,6 +169,7 @@ vertical-align:middle;
 }
 
 select, button {
+    background-color: white;
     cursor:pointer;
     height: 50px;
     font-size: 20px;
