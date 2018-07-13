@@ -196,7 +196,7 @@ button:hover {
      border: 1px solid black;
 }
 #output {
-    font-size: 30px;
+    font-size: 24px;
    font-family: 'Righteous', cursive;
     transition: all 1s ease-in-out;
 }
