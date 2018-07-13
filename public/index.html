@@ -154,11 +154,10 @@
            
             
             if (document.getElementById('bracket').classList.contains('check-on')) {
-                selectBracket();
+                document.getElementById('bracket').classList.toggle('check-on');
             }
             if (document.getElementById('scorer').classList.contains('check-on')) {
-            
-                selectScorer();
+                document.getElementById('scorer').classList.toggle('check-on');
             }
             document.getElementById('champion').classList.toggle('check-on');
         }
@@ -167,13 +166,12 @@
             
             
             if (document.getElementById('champion').classList.contains('check-on')) {
-                
-                 selectChampion();
+                document.getElementById('champion').classList.toggle('check-on');
                 
             } 
             if (document.getElementById('scorer').classList.contains('check-on')) 
             {
-                selectScorer();
+                 document.getElementById('scorer').classList.toggle('check-on');
             }
             document.getElementById('bracket').classList.toggle('check-on');
         }
@@ -182,10 +180,10 @@
             
             
             if (document.getElementById('champion').classList.contains('check-on')) {
-                selectChampion();
+                document.getElementById('champion').classList.toggle('check-on');
             } 
             if (document.getElementById('bracket').classList.contains('check-on')) {
-                selectBracket();
+                 document.getElementById('bracket').classList.toggle('check-on');
             }
             document.getElementById('scorer').classList.toggle('check-on');
         }
