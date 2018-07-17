@@ -19,6 +19,8 @@ app.get("/getWorldCupChampions", getWorldCupChampions)
 app.get("/getWorldCupTeams", getWorldCupTeams)
 app.get("/getWorldCupDetails", getWorldCupDetails)
 
+app.get("/getWorldCupMatchDetails", getWorldCupMatchDetails)
+
 app.listen(app.get("port"), function() {
     console.log("Now listening for connections on port: ", app.get("port"));
 });
@@ -155,6 +157,47 @@ function getWorldCupDetailsFromDb(year, callback) {
     console.log("getting Details from DB with year ", year);
    
     var sql = "SELECT country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties FROM worldcup WHERE year = $1::int";
+    var params = [year];
+
+    pool.query(sql, params, function(err, result){
+        if (err) {
+            console.log("An error occurred with the DB");
+            console.log(err);
+            callback(err, null);
+        }
+        console.log("Found Db result: " + JSON.stringify(result.rows));
+
+        callback(null, result.rows);
+    });
+}
+
+function getWorldCupMatchDetails(req, res) {
+    console.log("Getting Match Details");
+
+    var year = req.query.year;
+    console.log("Retrieving Match Details for year: ", year);
+    
+//    var result = [{runner_up_code: 
+//                   "URU", champion_code: "ARG", champion: "Uruguay", runner_up: "Argentina", champion_score: 3, runner_up_score: 1}];
+
+
+    getWorldCupMatchDetailsFromDb(year, function(error, result) {
+        console.log("Got data back from DB with result:", result);
+        if (error || result == null) {
+            res.status(500).json({success:false, data: error});
+        } else {
+            res.json(result);
+        }
+    });
+    
+//    res.json(result);
+}
+function getWorldCupMatchDetailsFromDb(year, callback) {
+    console.log("getting Details from DB with year ", year);
+   
+//    var sql = "SELECT country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties FROM worldcup WHERE year = $1::int";
+    
+    var sql = "SELECT wc_year, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties FROM matches WHERE year = $1::int";
     var params = [year];
 
     pool.query(sql, params, function(err, result){

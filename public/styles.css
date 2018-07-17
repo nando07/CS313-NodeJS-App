@@ -345,6 +345,7 @@ margin-left:
 }
 
 .team {
+        
     float: left;
   height: 18px;
     line-height: 20px;
@@ -369,7 +370,7 @@ margin-left:
 }
 
 
-#team-1 {
+.team-bracket {
     display: inline-block;
     width: 220px;
     max-width: 100%;    
