@@ -153,6 +153,7 @@
     <div id="brackets-display">       
         <div class="col-container">
         <div id="round16" class="column-2" style="background:orange">
+<!--
             <div class="team-bracket">
                
                 <div id="team-1-flag" class="team flag"><img src="countryFlags/ARG.png" id="arg"></div>
@@ -280,11 +281,13 @@
                 <div id="team-1-goals" class="team team-goals">3</div>
             </div>
             <br>
+-->
             </div>
             
             
 <!--            Quaterfinals-->
            
+<!--
             <div id="quarterfinals" class="column-2" style="background:yellow">
            <div class="team-bracket">
                
@@ -350,9 +353,11 @@
             <br>
         </div>
         
+-->
         
 <!--        SemiFinals-->
         
+<!--
         <div id="semifinals" class="column-2" style="background:orange">
             <div class="team-bracket">
                
@@ -389,8 +394,10 @@
            
         </div>
         
+-->
 <!--        Final-->
         
+<!--
         <div class="column-2" style="background:yellow">
            <div class="team-bracket">
                
@@ -407,7 +414,9 @@
                 <div id="team-1-goals" class="team team-goals">3</div>
             </div>  
             <br>
+        
         </div>
+-->
 
         <div class="column-2"  style="background:orange">
             <img src="wctrophy.png" class="cup-bracket">
@@ -590,7 +599,8 @@
             // brakets variables
             
             var bform = document.getElementById('bform'),
-                brackets = document.getElementById('brackets');
+                brackets = document.getElementById('brackets'),
+                round16 = document.getElementById('round16');
             
             bform.addEventListener('submit', function(b) {
                 
@@ -611,6 +621,15 @@
                         if (request.status === OKAY) {
                         
                         let dataObj = JSON.parse(request.responseText);
+                            
+                            console.log(dataObj);
+                            var i;
+                            for (i = 0; i < dataObj.length; i++) {
+                                round16.innerHTML = "<div class='team-bracket'>" +
+                                "<div id='team-1-flag' class='team flag'><img src='http://www.countryflags.io/" + dataObj[i].home_team_flag + "/flat/64.png' id='arg'></div>" +
+                                "<div id='team-1-name' class='team country-name'>" + dataObj[i].home_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].home_team_goals + "</div></div><br><div class='team-bracket'><div id='team-1-flag' class='team flag'><img src='http://www.countryflags.io/" + dataObj[i].away_team_flag +  "/flat/64.png' id='arg'></div><div id='team-1-name' class='team country-name'>" + dataObj[i].away_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].away_team_goals + "</div></div><br><br>"
+                            }
+                            
                         } else {
                             console.log(JSON.stringify(ERROR));
                         }
