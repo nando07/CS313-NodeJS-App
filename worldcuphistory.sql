@@ -53,6 +53,51 @@ INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_f
 INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'June-29-1998', 'round16', 'de', 'mx', 'Germany', 'Mexico', 2, 1, NULL, NULL);
 INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'June-30-1998', 'round16', 'ro', 'hr', 'Romania', 'Croatia', 0, 1, NULL, NULL);
 
+-- Quarterfinals -1998
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'July-3-1998', 'quaterfinals', 'br', 'dk', 'Brazil', 'Denmark', 3, 2, NULL, NULL);
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'July-4-1998', 'quaterfinals', 'nl', 'ar', 'Netherlands', 'Argentina', 2, 1, NULL, NULL);
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'July-3-1998', 'quaterfinals', 'it', 'fr', 'Italy', 'France', 0, 0, 3, 4);
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'July-3-1998', 'quaterfinals', 'de', 'hr', 'Germany', 'Croatia', 0, 3, NULL, NULL);
+
+-- Semifinals - 1998
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'July-7-1998', 'semifinals', 'br', 'nl', 'Brazil', 'Netherlands', 1, 1, 4, 2);
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'July-8-1998', 'semifinals', 'fr', 'hr', 'France', 'Croatia', 2, 1, NULL, NULL);
+
+-- Final -1998
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'July-12-1998', 'final', 'br', 'fr', 'Brazil', 'France', 0, 3, NULL, NULL);
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'July-11-1998', 'third-place', 'nl', 'hr', 'Netherlands', 'Croatia', 1, 3, NULL, NULL);
+
+-- MATCHES 2002
+
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (2002, 'June-15-2002', 'round16', 'de', 'py', 'Germany', 'Paraguay', 1, 0, NULL, NULL);
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (2002, 'June-17-2002', 'round16','mx', 'us', 'Mexico', 'United States', 0, 2, NULL, NULL);
+
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (2002, 'June-16-2002', 'round16', 'es', 'ie', 'Spain', 'Republic of Ireland', 1, 1, 3, 2);
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (2002, 'June-18-2002', 'round16', 'kr', 'it ', 'South Korea', 'Italy', 2, 1, NULL, NULL);
+
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (2002, 'June-15-2002', 'round16', 'dk', 'gb', 'Denmark', 'England', 0, 3, NULL, NULL);
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (2002, 'June-17-2002', 'round16', 'br', 'be', 'Brazil', 'Belguim', 2, 0, NULL, NULL);
+
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (2002, 'June-16-2002', 'round16', 'se', 'sn', 'Sweden', 'Senegal', 1, 2, NULL, NULL);
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (2002, 'June-18-2002', 'round16', 'jp', 'tr', 'Japan', 'Turkey', 0, 1, NULL, NULL);
+
+-- Quarterfinals -2002
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (2002, 'June-21-2002', 'quaterfinals', 'de', 'us', 'Germany', 'United States', 1, 0, NULL, NULL);
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (2002, 'June-22-2002', 'quaterfinals', 'es', 'kr', 'Spain', 'South Korea', 0, 0, NULL, NULL);
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (2002, 'June-21-2002', 'quaterfinals', 'gb', 'br', 'England', 'Brazil', 1, 2, NULL, NULL);
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (2002, 'June-22-2002', 'quaterfinals', 'se', 'tr', 'Senegal', 'Turkey', 0, 1, NULL, NULL);
+
+-- Semifinals - 2002
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (2002, 'June-25-2002', 'semifinals', 'de', 'kr', 'Germany', 'South Korea', 1, 0, NULL, NULL);
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (2002, 'June-26-2002', 'semifinals', 'br', 'tr', 'Brazil', 'Turkey', 1, 0, NULL, NULL);
+
+-- Final -2002
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'June-30-2002', 'final', 'de', 'br', 'Germany', 'Brazil', 0, 2, NULL, NULL);
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'June-29-2002', 'third-place', 'kr', 'tr', 'South Korea', 'Turkey', 2, 3, NULL, NULL);
+
+
+
+
 -- INSERT INTO matches(match_date, match_type, home_team, away_team, home_team_goals, away_team_goals) VALUES ('07/30/1930', 'final', )
 
 INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('Uruguay', 1930, 'Uruguay', 'Argentina', 'URU', 'ARG', 4, 2, NULL, NULL);
