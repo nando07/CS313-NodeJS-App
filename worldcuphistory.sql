@@ -31,8 +31,8 @@ CREATE TABLE matches
     match_type VARCHAR(100) NOT NULL,
     home_team_flag VARCHAR(100) NOT NULL,
     away_team_flag VARCHAR(100) NOT NULL,
-    home_team INTEGER REFERENCES team (id),
-    away_team INTEGER REFERENCES team (id),
+    home_team VARCHAR(100) NOT NULL,
+    away_team VARCHAR(100) NOT NULL,
     home_team_goals INTEGER NOT NULL,
     away_team_goals INTEGER NOT NULL,
     home_team_penalties INTEGER,
@@ -41,17 +41,17 @@ CREATE TABLE matches
 
 -- MATCHES 1998
 
-INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'June-27-1998', 'round16', 'br', 'cl', 25, 30, 4, 1, NULL, NULL);
-INSERT INTO matches(wc_year, match_date, match_type, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'June-28-1998', 'round16','ng', 'dk', 37, 34, 1, 4, NULL, NULL);
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'June-27-1998', 'round16', 'br', 'cl', 'Brazil', 'Chile', 4, 1, NULL, NULL);
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'June-28-1998', 'round16','ng', 'dk', 'Nigeria', 'Denmark', 1, 4, NULL, NULL);
 
-INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'June-29-1998', 'round16', 'nl', 'rs', 41, 46, 2, 1, NULL, NULL);
-INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'June-30-1998', 'round16', 'ar', 'gb', 53, 50, 2, 2, 4, 3);
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'June-29-1998', 'round16', 'nl', 'rs', 'Netherlands', 'Yugoslavia', 2, 1, NULL, NULL);
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'June-30-1998', 'round16', 'ar', 'gb', 'Argentina', 'England', 2, 2, 4, 3);
 
-INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'June-27-1998', 'round16', 'it', 'no', 29, 26, 1, 0, NULL, NULL);
-INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'June-28-1998', 'round16', 'fr', 'py', 33, 38, 1, 0, NULL, NULL);
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'June-27-1998', 'round16', 'it', 'no', 'Italy', 'Norway', 1, 0, NULL, NULL);
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'June-28-1998', 'round16', 'fr', 'py', 'France', 'Paraguay', 1, 0, NULL, NULL);
 
-INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'June-29-1998', 'round16', 'de', 'mx', 45, 42, 2, 1, NULL, NULL);
-INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'June-30-1998', 'round16', 'ro', 'hr', 49, 54, 0, 1, NULL, NULL);
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'June-29-1998', 'round16', 'de', 'mx', 'Germany', 'Mexico', 2, 1, NULL, NULL);
+INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'June-30-1998', 'round16', 'ro', 'hr', 'Romania', 'Croatia', 0, 1, NULL, NULL);
 
 -- INSERT INTO matches(match_date, match_type, home_team, away_team, home_team_goals, away_team_goals) VALUES ('07/30/1930', 'final', )
 

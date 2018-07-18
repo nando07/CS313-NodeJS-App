@@ -592,9 +592,9 @@
             var bform = document.getElementById('cform'),
                 brackets = document.getElementById('brackets');
             
-            bform.addEventListener('submit', function(e) {
+            bform.addEventListener('submit', function(b) {
                 
-                e.preventDefault();
+                b.preventDefault();
                 
                 var request = new XMLHttpRequest(),
                     target = '/getWorldCupMatchDetails?year=' + brackets.value;
