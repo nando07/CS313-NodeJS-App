@@ -637,14 +637,12 @@
                                 }
                                 
                                 else if (dataObj[i].match_type == 'quarterfinals') {
+                                    
                                     quarterfinals.innerHTML += "<div class='team-bracket'>" +
                                 "<div id='team-1-flag' class='team flag'><img src='http://www.countryflags.io/" + dataObj[i].home_team_flag + "/flat/64.png' id='arg'></div>" +
                                 "<div id='team-1-name' class='team country-name'>" + dataObj[i].home_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].home_team_goals + "</div></div><br><div class='team-bracket'><div id='team-1-flag' class='team flag'><img src='http://www.countryflags.io/" + dataObj[i].away_team_flag +  "/flat/64.png' id='arg'></div><div id='team-1-name' class='team country-name'>" + dataObj[i].away_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].away_team_goals + "</div></div><br><br>"
                                 }
-                                    
-                                }
-                            }
-                            
+                            }    
                         } else {
                             console.log(JSON.stringify(ERROR));
                         }
