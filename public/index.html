@@ -13,7 +13,7 @@
 
 </head>
 
-<body>
+<body onload="getLastVisitedDate()">
 
     <nav id="navigation" class="sidebar">
         <ul>
@@ -48,6 +48,7 @@
                     </a>
 
             </li>
+            
             <!--
                   <li>
                     <a href="#">
@@ -71,6 +72,7 @@
                 -->
         </ul>
         <a href="#" class="sidebar-toggle" onclick="addClass()"></a>
+        
     </nav>
 
 
@@ -150,6 +152,7 @@
             <button>Final Match Result</button>
         </form>
     </div>
+    
     </div>
     
     <div id="brackets-display">       
@@ -460,7 +463,7 @@
                 <option value="2018">Russia - 2018</option>
             </select>
 
-            <button>Final Match Result</button>
+            <button>Match Results</button>
         </form>
     </div>
      
@@ -843,8 +846,39 @@
             t.style.webkitTransform = 'rotate(0deg)';
         }
         
+        
+        function getLastVisitedDate() {
+            
+            var date = new Date();
+            var day = date.getDate();
+            var month = date.getMonth();
+            var year = date.getFullYear();
+            
+            var pageVisits = 0;
+            
+            pageVisits++;
+            
+            console.log(day);
+            console.log(month);
+            console.log(year);
+        
+            var storageDate = {"month": month, "day": day, "year": year};
+            console.log(storageDate);
+        
+        localStorage.setItem('visited', pageVisits);
+        
+        var vNumber = localStorage.getItem('visited');
+       
+            
+//            document.getElementById('date').innerHTML = "Last Visited: " + storageDate.month + "-" + storageDate.day + "-" + storageDate.year;
+            
+            document.getElementById('visits').innerHTML = "Number of Visits: " + vNumber; 
+        }
+        
         function addClass() {
             document.getElementById('navigation').classList.toggle('sidebar-open');
+            
+                    
         }
 
         // Constants used during the AJAX request.
@@ -853,10 +887,17 @@
         const ERROR = {
             "message": "The request failed!"
         };
+        
+           
+             
 
         // Wait for the document to load before binding event handlers further.
         document.addEventListener('DOMContentLoaded', function(e) {
-
+            
+           
+//            
+//            localStorage.setItem();
+            
             selectChampion();
             // Obtain programmatic reference to the important elements of the page.
             var cform = document.getElementById('cform'),
@@ -1027,7 +1068,25 @@
             });
         });
 
+//        var date = new Date();
+//            var day = date.getDate();
+//            var month = date.getMonth();
+//            var year = date.getFullYear();
+//            
+//            console.log(day);
+//            console.log(month);
+//            console.log(year);
+//        
+//            var storageDate = {"month": month, "day": day, "year": year};
+//            console.log(storageDate);
+//        
+//        localStorage.setItem('visited', JSON.stringify(storageDate));
+//        
+//        var sDate = JSON.parse(localStorage.getItem('visited'));
+//        console.log(sDate);
     </script>
+    <p id="date"></p>
+    <p id="visits"></p>
 </body>
 
 </html>
