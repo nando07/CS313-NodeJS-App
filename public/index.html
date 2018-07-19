@@ -856,6 +856,7 @@
             var pageVisits = 1;
             if (localStorage.getItem("visited") != null) {
                pageVisits++;
+               localStorage.setItem('visited', pageVisits);
                pageVisits = localStorage.getItem('visited');
             }
             
