@@ -854,7 +854,7 @@
             var month = date.getMonth();
             var year = date.getFullYear();
             var pageVisits = 1;
-            if (localStorage.getItem('visited')) {
+            if (localStorage.getItem("visited") != null) {
                pageVisits++;
                pageVisits = localStorage.getItem('visited');
             }
