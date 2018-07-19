@@ -235,7 +235,7 @@ INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_u
 INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('Germany', 2006, 'Italy', 'France', 'ITA', 'FRA', 1, 1, 5, 3);
 INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('South Africa', 2010, 'Spain', 'Netherlands', 'ESP', 'NED', 1, 0, NULL, NULL);
 INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('Brazil', 2014, 'Germany', 'Argentina', 'GER', 'ARG', 1, 0, NULL, NULL);
-INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('Russia', 2018, 'N/A', 'N/A', 'N/A','N/A', NULL, NULL, NULL, NULL);
+INSERT INTO worldcup(country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties) VALUES ('Russia', 2018, 'France', 'Croatia', 'FRA','CRO', 4, 2, NULL, NULL);
 
 
 /* 1930 - URUGUAY */
