@@ -470,10 +470,10 @@ img {
 .column-2 {
     vertical-align: middle;
     display: table-cell;
+    padding-top: 40px;
     /*    float: left;*/
     /*    width: 100%;*/
-    padding: 6px;
-    /*    border: 1px solid;*/
+/*    padding: 6px;*/
     /*    height: auto;  Should be removed. Only for demonstration */
 }
 
