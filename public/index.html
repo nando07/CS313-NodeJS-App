@@ -853,10 +853,13 @@
             var day = date.getDate();
             var month = date.getMonth();
             var year = date.getFullYear();
+            var pageVisits = 1;
+            if (localStorage.getItem('visited')) {
+               pageVisits++;
+               pageVisits = localStorage.getItem('visited');
+            }
             
-            var pageVisits = 0;
             
-            pageVisits++;
             
             console.log(day);
             console.log(month);
