@@ -700,6 +700,7 @@
 //  if (round16.classList.contains('appear')){
 //                  round16.classList.toggle('appear');
 //                }
+                 round16.style.opacity = '0';
                 b.preventDefault();
                 
                 var request = new XMLHttpRequest(),
@@ -708,7 +709,7 @@
                 request.open('GET', target);
                 
                 round16.innerHTML = ''; 
-                round16.style.opacity = '0';
+               
                 quarterfinals.innerHTML = '';  
                 semifinals.innerHTML = ''; 
                 final.innerHTML = ''; 
@@ -757,7 +758,7 @@
 //                            round16.classList.toggle('appear');
                            setTimeout(function() {
                             round16.style.opacity = '1';
-                           }, 1000);
+                           }, 2000);
                         } else {
                             console.log(JSON.stringify(ERROR));
                         }
