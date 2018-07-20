@@ -358,13 +358,12 @@ img {
 
 /* BRACKETS */
 
-.brackets {
+.brackets{
     opacity: 0;
-    transition: all 2s ease-in-out;
+    transition: all 2s;
 }
-.brackets.appear {
-    opacity: 1;   
-    
+.appear {
+    opacity: 1;    
 }
 
 /*
