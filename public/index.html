@@ -697,7 +697,9 @@
                 final = document.getElementById('final');
             
             bform.addEventListener('submit', function(b) {
-//                round16.classList.toggle('appear');
+  if (round16.classList.contains('appear')){
+                  round16.classList.toggle('appear');
+                }
                 b.preventDefault();
                 
                 var request = new XMLHttpRequest(),
@@ -706,9 +708,6 @@
                 request.open('GET', target);
                 
                 round16.innerHTML = ''; 
-  if (round16.classList.contains('appear')){
-                  round16.classList.toggle('appear');
-                }
                 
                 quarterfinals.innerHTML = '';  
                 semifinals.innerHTML = ''; 
