@@ -360,7 +360,7 @@ img {
 
 #round16, #quarterfinals, #semifinals, #final {
     opacity: 0;
-    animation: bracket 3s;
+    animation: bracket 3s forwards;
     
 }
 
