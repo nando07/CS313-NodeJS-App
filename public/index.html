@@ -697,7 +697,7 @@
                 final = document.getElementById('final');
             
             bform.addEventListener('submit', function(b) {
-                
+                round16.classList.toggle('appear');
                 b.preventDefault();
                 
                 var request = new XMLHttpRequest(),
@@ -706,7 +706,6 @@
                 request.open('GET', target);
                 
                 round16.innerHTML = ''; 
-                round16.classList.toggle('appear');
 
                 
                 quarterfinals.innerHTML = '';  
