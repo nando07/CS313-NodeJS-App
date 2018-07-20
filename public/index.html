@@ -138,7 +138,7 @@
         <div class="col-container">
         <div class="column-2">
          <h2>Round of 16</h2>
-         <div id="round16"></div>
+         <div id="round16" class="brackets"></div>
             </div>
             
             
@@ -706,6 +706,8 @@
                 request.open('GET', target);
                 
                 round16.innerHTML = ''; 
+                document.getElementById('round16').classList.toggle('appear');
+                
                 quarterfinals.innerHTML = '';  
                 semifinals.innerHTML = ''; 
                 final.innerHTML = ''; 
@@ -729,7 +731,9 @@
                                 
                                 round16.innerHTML += "<div class='team-bracket'>" +
                                 "<div id='team-1-flag' class='team flag'><img src='http://www.countryflags.io/" + dataObj[i].home_team_flag + "/flat/64.png' id='arg'></div>" +
-                                "<div id='team-1-name' class='team country-name'>" + dataObj[i].home_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].home_team_goals + "</div></div><br><div class='team-bracket'><div id='team-1-flag' class='team flag'><img src='http://www.countryflags.io/" + dataObj[i].away_team_flag +  "/flat/64.png' id='arg'></div><div id='team-1-name' class='team country-name'>" + dataObj[i].away_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].away_team_goals + "</div></div><br><br>"
+                                "<div id='team-1-name' class='team country-name'>" + dataObj[i].home_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].home_team_goals + "</div></div><br><div class='team-bracket'><div id='team-1-flag' class='team flag'><img src='http://www.countryflags.io/" + dataObj[i].away_team_flag +  "/flat/64.png' id='arg'></div><div id='team-1-name' class='team country-name'>" + dataObj[i].away_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].away_team_goals + "</div></div><br><br>";
+                                    
+                                    document.getElementById('round16').classList.toggle('appear');
                                 }
                                 
                                 else if (dataObj[i].match_type == 'quarterfinals') {

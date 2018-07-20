@@ -358,16 +358,22 @@ img {
 
 /* BRACKETS */
 
-#round16, #quarterfinals, #semifinals, #final {
+.brackets {
     opacity: 0;
-    animation: bracket 3s forwards;
+    transition: opacity 1s ease-in-out;
+    
+}
+.appear {
+    opacity: 1;   
+}
+
+#round16, #quarterfinals, #semifinals, #final {
+    
+    transition: all 2s ease-in-out; 
     
 }
 
-@keyframes bracket {
-    from {opacity: 0;}
-        to {opacity: 1;}
-    }
+
 
 
 .cup-bracket {
