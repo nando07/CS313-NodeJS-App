@@ -360,10 +360,11 @@ img {
 
 .brackets {
     opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 .brackets.appear {
     opacity: 1;   
-    transition: opacity 1s ease-in-out;
+    
 }
 
 #round16, #quarterfinals, #semifinals, #final {
