@@ -360,10 +360,13 @@ img {
 
 #round16, #quarterfinals, #semifinals, #final {
     
-    animation: bracket 3s infinite;
+    opacity: 1;
+    -webkit-transition: opacity 2s linear 1s; /* For Safari 3.1 to 6.0 */
+    transition: opacity 2s linear 1s;
     
 }
 
+/*
 @keyframes bracket {
     0% {
         opacity: 0;
@@ -376,6 +379,7 @@ img {
     }
 
 }
+*/
 
 .cup-bracket {
     width: 100px;
