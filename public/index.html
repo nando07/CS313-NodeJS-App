@@ -708,7 +708,7 @@
                 request.open('GET', target);
                 
                 round16.innerHTML = ''; 
-                
+                round16.style.opacity = '0';
                 quarterfinals.innerHTML = '';  
                 semifinals.innerHTML = ''; 
                 final.innerHTML = ''; 
@@ -730,13 +730,13 @@
                                 
                                 if (dataObj[i].match_type == 'round16') {
                                 
-                                 setTimeout(function() {
+                                 
                                 round16.innerHTML += "<div class='team-bracket'>" +
                                 "<div id='team-1-flag' class='team flag'><img src='http://www.countryflags.io/" + dataObj[i].home_team_flag + "/flat/64.png' id='arg'></div>" +
                                 "<div id='team-1-name' class='team country-name'>" + dataObj[i].home_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].home_team_goals + "</div></div><br><div class='team-bracket'><div id='team-1-flag' class='team flag'><img src='http://www.countryflags.io/" + dataObj[i].away_team_flag +  "/flat/64.png' id='arg'></div><div id='team-1-name' class='team country-name'>" + dataObj[i].away_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].away_team_goals + "</div></div><br><br>";
                                  
                                  round16.style.opacity = '1';
-                                 }, 1000);
+                                
                                 }
                                 
                                 else if (dataObj[i].match_type == 'quarterfinals') {
