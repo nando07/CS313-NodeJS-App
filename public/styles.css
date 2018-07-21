@@ -364,7 +364,7 @@ h2 {
 
 .rounds {
 
-    transition: opacity .5s;
+    transition: opacity 1.5s;
 }
 
 .rounds.appear {
