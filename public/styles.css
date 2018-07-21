@@ -360,7 +360,7 @@ img {
 
 .rounds{
   
-    transition: all 2s;
+    transition: all 1s;
 }
 .rounds.appear {
     opacity: 1;    

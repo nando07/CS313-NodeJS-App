@@ -697,15 +697,7 @@
                 final = document.getElementById('final');
             
             bform.addEventListener('submit', function(b) {
-//  if (round16.classList.contains('appear')){
-//                  round16.classList.toggle('appear');
-//                }
-                
-              if (round16.classList.contains('rounds')){
-                round16.classList.remove('rounds');
-              }
-                
-                 round16.style.opacity = '0';
+        
                 b.preventDefault();
                 
                 var request = new XMLHttpRequest(),
@@ -714,6 +706,11 @@
                 request.open('GET', target);
                 
                 round16.innerHTML = ''; 
+                if (round16.classList.contains('rounds')){
+                round16.classList.remove('rounds');
+              }
+                
+                 round16.style.opacity = '0';
                
                 quarterfinals.innerHTML = '';  
                 semifinals.innerHTML = ''; 
