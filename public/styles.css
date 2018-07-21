@@ -359,7 +359,7 @@ img {
 /* BRACKETS */
 
 h2 {
-    transition: all 1s;
+    transition: margin 2s;
 }
 
 .rounds{
