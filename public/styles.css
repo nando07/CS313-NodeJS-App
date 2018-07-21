@@ -360,7 +360,7 @@ img {
 
 .rounds{
   
-    transition: opacity 1s;
+    transition: opacity .5s;
 }
 .rounds.appear {
     opacity: 1;    
@@ -482,18 +482,13 @@ img {
 }
 
 #arg {
-    /*    max-width:*/
     height: 18px;
 }
 
 .column-2 {
     vertical-align: middle;
     display: table-cell;
-    padding-top: 40px;
-    /*    float: left;*/
-    /*    width: 100%;*/
-/*    padding: 6px;*/
-    /*    height: auto;  Should be removed. Only for demonstration */
+    padding-top: 10px;
 }
 
 @media only screen and (max-width: 800px) {
