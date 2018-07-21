@@ -358,10 +358,6 @@ img {
 
 /* BRACKETS */
 
-h2 {
-    transition: margin 2s;
-}
-
 .rounds{
   
     transition: opacity 1s;

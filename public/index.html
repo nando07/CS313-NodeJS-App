@@ -694,7 +694,8 @@
                 round16 = document.getElementById('round16'),
                 quarterfinals = document.getElementById('quarterfinals'),
                 semifinals = document.getElementById('semifinals'),
-                final = document.getElementById('final');
+                final = document.getElementById('final'),
+                bracketScreen = document.getElementById('brackets-display');
             
             bform.addEventListener('submit', function(b) {
         
@@ -706,11 +707,27 @@
                 request.open('GET', target);
                 
                 round16.innerHTML = ''; 
-                if (round16.classList.contains('rounds')){
-                round16.classList.remove('rounds');
+                if (bracketScreen.classList.contains('rounds')){
+                bracketScreen.classList.remove('rounds');
+                    bracketScreen.style.opacity = '0';
               }
-                
-                 round16.style.opacity = '0';
+//                
+//                if (quarterfinals.classList.contains('rounds')) {
+//                    quarterfinals.classList.remove('rounds');
+//                    quarterfinals.style.opacity = '0';
+//                } 
+//                
+//                if (semifinals.classList.contains('rounds')){
+//                    semifinals.classList.remove('rounds');
+//                    semifinals.style.opacity = '0';
+//                }
+//                
+//                 if (final.classList.contains('rounds')){
+//                    final.classList.remove('rounds');
+//                    final.style.opacity = '0';
+//                }
+//                
+//                 round16.style.opacity = '0';
                
                 quarterfinals.innerHTML = '';  
                 semifinals.innerHTML = ''; 
@@ -759,8 +776,8 @@
                             }
 //                            round16.classList.toggle('appear');
                            setTimeout(function() {
-                            round16.classList.add('rounds');
-                            round16.style.opacity = '1';
+                            bracketScreen.classList.add('rounds');
+                            bracketScreen.style.opacity = '1';
                            }, 1000);
                         } else {
                             console.log(JSON.stringify(ERROR));
