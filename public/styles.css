@@ -358,9 +358,13 @@ img {
 
 /* BRACKETS */
 
+h2 {
+    transition: all 1s;
+}
+
 .rounds{
   
-    transition: all 1s;
+    transition: opacity 1s;
 }
 .rounds.appear {
     opacity: 1;    
