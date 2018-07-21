@@ -216,8 +216,9 @@
 
                 round16.innerHTML = '';
                 if (bracketScreen.classList.contains('rounds')) {
-                    bracketScreen.classList.remove('rounds');
                     bracketScreen.style.opacity = '0';
+                    bracketScreen.classList.remove('rounds');
+                    
                 }
 
                 quarterfinals.innerHTML = '';
