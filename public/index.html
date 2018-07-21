@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    
+
     <title>WCH</title>
 
     <link href="styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    
+
     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
 
 </head>
@@ -38,7 +38,7 @@
                     </a>
 
             </li>
-            <li  onmouseover="scorerIn()" onmouseout="scorerOut()"  onclick="selectScorer()">
+            <li onmouseover="scorerIn()" onmouseout="scorerOut()" onclick="selectScorer()">
                 <a href="#">
                         <i class="fa fa-futbol fa-2x"></i>
                         <span class="nav-text">
@@ -48,63 +48,63 @@
                     </a>
 
             </li>
-            
+
         </ul>
         <a href="#" class="sidebar-toggle" onclick="addClass()"></a>
-        
+
     </nav>
 
 
     <div id="champions-display">Home
-    <div class="row" id="main-container">
-        <div class="column">
-            <div id="home-team">
-                <div id="loaderA">
-                    <div class="dot dot1"></div>
-                    <div class="dot dot2"></div>
-                    <div class="dot dot3"></div>
-                    <div class="dot dot4"></div>
+        <div class="row" id="main-container">
+            <div class="column">
+                <div id="home-team">
+                    <div id="loaderA">
+                        <div class="dot dot1"></div>
+                        <div class="dot dot2"></div>
+                        <div class="dot dot3"></div>
+                        <div class="dot dot4"></div>
+                    </div>
+                    <div id="home-country-code"></div>
+                    <div id="home-country-flag">
+                        <!-- Add div to keep flag space so that changing between final scores creates a smoother transition intead of seeing the scores ocupying the flag space for milliseconds. -->
+                        <!--            <img src="countryFlags/ARG.png" class="flags">-->
+                    </div>
+                    <div id="home-score"></div>
                 </div>
-                <div id="home-country-code"></div>
-                <div id="home-country-flag">
-                   <!-- Add div to keep flag space so that changing between final scores creates a smoother transition intead of seeing the scores ocupying the flag space for milliseconds. -->
-                    <!--            <img src="countryFlags/ARG.png" class="flags">-->
+            </div>
+
+            <div class="column" id="cup">
+                <div class="shine-effect">
+                    <img src="wctrophy.png" class="trophy">
                 </div>
-                <div id="home-score"></div>
+            </div>
+
+            <div class="column">
+                <div id="away-team">
+                    <div id="loaderB">
+                        <div class="dot dot1"></div>
+                        <div class="dot dot2"></div>
+                        <div class="dot dot3"></div>
+                        <div class="dot dot4"></div>
+                    </div>
+                    <div id="away-country-code"></div>
+                    <div id="away-country-flag">
+                        <!--            <img src="countryFlags/URU.png" class="flags">-->
+                    </div>
+                    <div id="away-score"></div>
+
+
+                </div>
             </div>
         </div>
+        <div id="output">
 
-        <div class="column" id="cup">
-           <div class="shine-effect">
-            <img src="wctrophy.png" class="trophy">
-            </div>
+
         </div>
-
-        <div class="column">
-            <div id="away-team">
-                <div id="loaderB">
-                    <div class="dot dot1"></div>
-                    <div class="dot dot2"></div>
-                    <div class="dot dot3"></div>
-                    <div class="dot dot4"></div>
-                </div>
-                <div id="away-country-code"></div>
-                <div id="away-country-flag">
-                    <!--            <img src="countryFlags/URU.png" class="flags">-->
-                </div>
-                <div id="away-score"></div>
-
-
-            </div>
-        </div>
-    </div>
-    <div id="output">
-
-
-    </div>
-    <div id="search-form">
-        <form id="cform" action="/getWorldCupDetails" method="GET">
-            <select id="finalists" name="year">
+        <div id="search-form">
+            <form id="cform" action="/getWorldCupDetails" method="GET">
+                <select id="finalists" name="year">
                 <option value="1930">Uruguay - 1930</option>
                 <option value="1934">Italy - 1934</option>
                 <option value="1938">France - 1938</option>
@@ -128,57 +128,57 @@
                 <option value="2018">Russia - 2018</option>
             </select>
 
-            <button>Final Match Result</button>
-        </form>
+                <button>Final Match Result</button>
+            </form>
+        </div>
+
     </div>
-    
-    </div>
-    
-    <div id="brackets-display">       
+
+    <div id="brackets-display">
         <div id="screen-display" class="col-container">
-        <div class="column-2">
-         <h2>Round of 16</h2>
-         <div id="round16"></div>
-            </div>
-            
-            
-<!--            Quaterfinals-->
-           
             <div class="column-2">
-            <h2>Quarterfinals</h2>
-         <div id="quarterfinals"></div>
-        </div>
-        
-        
-<!--        SemiFinals-->
-        
-        <div class="column-2">
-         <h2>Semifinals</h2>
-         <div id="semifinals"></div>    
-        </div>
-        
-<!--        Final-->
-        
-        <div class="column-2">
-        <h2>Final</h2>
-         <div id="final"></div>
-        </div>
-
-        <div class="column-2" >
-           <div class="shine-effect">
-            <img src="wctrophy.png" class="cup-bracket">
+                <h2>Round of 16</h2>
+                <div id="round16"></div>
             </div>
+
+
+            <!--            Quaterfinals-->
+
+            <div class="column-2">
+                <h2>Quarterfinals</h2>
+                <div id="quarterfinals"></div>
+            </div>
+
+
+            <!--        SemiFinals-->
+
+            <div class="column-2">
+                <h2>Semifinals</h2>
+                <div id="semifinals"></div>
+            </div>
+
+            <!--        Final-->
+
+            <div class="column-2">
+                <h2>Final</h2>
+                <div id="final"></div>
+            </div>
+
+            <div class="column-2">
+                <div class="shine-effect">
+                    <img src="wctrophy.png" class="cup-bracket">
+                </div>
+            </div>
+
+
         </div>
-
-        
-    </div>
-    <div id="output">
+        <div id="output">
 
 
-    </div>
-    <div id="search-form">
-        <form id="bform" action="/getWorldCupMatchDetails" method="GET">
-            <select id="brackets" name="year">
+        </div>
+        <div id="search-form">
+            <form id="bform" action="/getWorldCupMatchDetails" method="GET">
+                <select id="brackets" name="year">
 <!--
                 <option value="1930">Uruguay - 1930</option>
                 <option value="1934">Italy - 1934</option>
@@ -204,327 +204,327 @@
                 <option value="2018">Russia - 2018</option>
             </select>
 
-            <button>Match Results</button>
-        </form>
+                <button>Match Results</button>
+            </form>
+        </div>
+
+
     </div>
-     
-        
-    </div>
-    
+
     <div id="scorer-display">
-           
-           <div class="spacer"></div>
-           <div id="wrapper">
+
+        <div class="spacer"></div>
+        <div id="wrapper">
             <div class="card-container">
-            <div class="card">
-                <div class="front">
-                    <img class="heroImg" src="topScorers/stabile1930.jpg">
-                </div>
-                <div class="back">
-                    <h1>Guillermo Stabile</h1>
-                    <h3>Argentina - 1930</h3>
-                    <h4>8 Goals</h4>
-<!--
+                <div class="card">
+                    <div class="front">
+                        <img class="heroImg" src="topScorers/stabile1930.jpg">
+                    </div>
+                    <div class="back">
+                        <h1>Guillermo Stabile</h1>
+                        <h3>Argentina - 1930</h3>
+                        <h4>8 Goals</h4>
+                        <!--
                     <p>In the first World Cup, Guillermo Stabile was the top scorer with 8 goals.</p>
 -->
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        
-        <div class="card-container">
-            <div class="card">
-                <div class="front">
-                    <img class="heroImg" src="topScorers/nejedly1934.jpg">
-                </div>
-                <div class="back">
-                    <h1>Oldrich Nejedly</h1>
-                    <h3>Czechoslovakia - 1934</h3>
-                    <h4>5 Goals</h4>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card-container">
-            <div class="card">
-                <div class="front">
-                    <img class="heroImg" src="topScorers/leonidas1938.jpg">
-                </div>
-                <div class="back">
-                    <h1>Leonidas</h1>
-                    <h3>Brazil - 1938</h3>
-                    <h4>7 Goals</h4>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card-container">
-            <div class="card">
-                <div class="front">
-                    <img class="heroImg" src="topScorers/ademir1950.jpg">
-                </div>
-                <div class="back">
-                   <h1>Ademir</h1>
-                    <h3>Brazil - 1950</h3>
-                    <h4>8 Goals</h4>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card-container">
-            <div class="card">
-                <div class="front">
-                    <img class="heroImg" src="topScorers/kocsis1954.jpg">
-                </div>
-                <div class="back">
-                     <h1>Sandor Kocsis</h1>
-                    <h3>Hungary- 1954</h3>
-                    <h4>11 Goals</h4>
-                </div>
-            </div>
-        </div>
-        <div class="card-container">
-            <div class="card">
-                <div class="front">
-                    <img class="heroImg" src="topScorers/fontaine1958.jpg">
-                </div>
-                <div class="back">
-                     <h1>Just Fontaine</h1>
-                    <h3>France - 1958</h3>
-                    <h4>13 Goals</h4>
-                </div>
-            </div>
-        </div>
-        <div class="card-container">
-            <div class="card">
-                <div class="front">
-                    <img class="heroImg" src="topScorers/garrincha1962.jpg">
-                </div>
-                <div class="back">
-                     <h1>"Garrincha"</h1>
-                    <h3>Brazil - 1962</h3>
-                    <h4>4 Goals</h4>
-                </div>
-            </div>
-        </div>
-           <div class="card-container">
-            <div class="card">
-                <div class="front">
-                    <img class="heroImg" src="topScorers/eusebio1966.jpg">
-                </div>
-                <div class="back">
-                     <h1>Eusebio</h1>
-                    <h3>Portugal - 1966</h3>
-                    <h4>9 Goals</h4>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card-container">
-            <div class="card">
-                <div class="front">
-                    <img class="heroImg" src="topScorers/muller1970.jpg">
-                </div>
-                <div class="back">
-                     <h1>Gerd Muller</h1>
-                    <h3>Germany - 1970</h3>
-                    <h4>10 Goals</h4>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card-container">
-            <div class="card">
-                <div class="front">
-                    <img class="heroImg" src="topScorers/lato1974.jpg">
-                </div>
-                <div class="back">
-                     <h1>Grzegorz Lato</h1>
-                    <h3>Poland - 1974</h3>
-                    <h4>7 Goals</h4>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card-container">
-            <div class="card">
-                <div class="front">
-                    <img class="heroImg" src="topScorers/kempes1978.jpg">
-                </div>
-                <div class="back">
-                        <h1>Mario Kempes</h1>
-                    <h3>Argentina - 1978</h3>
-                    <h4>6 Goals</h4>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card-container">
-            <div class="card">
-                <div class="front">
-                    <img class="heroImg" src="topScorers/rossi1982.png">
-                </div>
-                <div class="back">
-                     <h1>Paolo Rossi</h1>
-                    <h3>Italy - 1982</h3>
-                    <h4>6 Goals</h4>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card-container">
-            <div class="card">
-                <div class="front">
-                    <img class="heroImg" src="topScorers/lineker1986.jpg">
-                </div>
-                <div class="back">
-                     <h1>Gary Lineker</h1>
-                    <h3>England - 1986</h3>
-                    <h4>6 Goals</h4>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card-container">
-            <div class="card">
-                <div class="front">
-                    <img class="heroImg" src="topScorers/salvator1990.jpg">
-                </div>
-                <div class="back">
-                    <h1>Salvator Schillachi</h1>
-                    <h3>Italy - 1990</h3>
-                    <h4>6 Goals</h4>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card-container">
-            <div class="card">
-                <div class="front">
-                    <img class="heroImg" src="topScorers/stoichov1994.jpeg">
-                </div>
-                <div class="back">
-                    <h1>Hristo Stoichkov</h1>
-                    <h3>Bulgaria - 1994</h3>
-                    <h4>6 Goals</h4>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card-container">
-            <div class="card">
-                <div class="front">
-                    <img class="heroImg" src="topScorers/suker1998.jpg">
-                </div>
-                <div class="back">
-                    <h1>Davor Suker</h1>
-                    <h3>Croatia - 1998</h3>
-                    <h4>6 Goals</h4>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card-container">
-            <div class="card">
-                <div class="front">
-                    <img class="heroImg" src="topScorers/ronaldo2002.jpg">
-                </div>
-                <div class="back">
-                    <h1>Ronaldo</h1>
-                    <h3>Brazil - 2002</h3>
-                    <h4>8 Goals</h4>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card-container">
-            <div class="card">
-                <div class="front">
-                    <img class="heroImg" src="topScorers/klose2006.jpeg">
-                </div>
-                <div class="back">
-                    <h1>Miroslav Klose</h1>
-                    <h3>Germany - 2006</h3>
-                    <h4>5 Goals</h4>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card-container">
-            <div class="card">
-                <div class="front">
-                    <img class="heroImg" src="topScorers/forlan2010.jpg">
-                </div>
-                <div class="back">
-                    <h1>Diego Forlan</h1>
-                    <h3>Uruguay - 2010</h3>
-                    <h4>5 Goals</h4>
-                </div>
-            </div>
-        </div>
-        
-         <div class="card-container">
-            <div class="card">
-                <div class="front">
-                    <img class="heroImg" src="topScorers/james2014.jpeg">
-                </div>
-                <div class="back">
-                    <h1>James Rodriguez</h1>
-                    <h3>Colombia - 2014</h3>
-                    <h4>6 Goals</h4>
-                </div>
-            </div>
-        </div>
-        
-         <div class="card-container">
-            <div class="card">
-                <div class="front">
-                    <img class="heroImg" src="topScorers/kane2018.jpg">
-                </div>
-                <div class="back">
-                    <h1>Harry Kane</h1>
-                    <h3>England - 2018</h3>
-                    <h4>6 Goals</h4>
-                </div>
-            </div>
-        </div>
-        </div>
-        </div>
-        
-        
-    
 
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <img class="heroImg" src="topScorers/nejedly1934.jpg">
+                    </div>
+                    <div class="back">
+                        <h1>Oldrich Nejedly</h1>
+                        <h3>Czechoslovakia - 1934</h3>
+                        <h4>5 Goals</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <img class="heroImg" src="topScorers/leonidas1938.jpg">
+                    </div>
+                    <div class="back">
+                        <h1>Leonidas</h1>
+                        <h3>Brazil - 1938</h3>
+                        <h4>7 Goals</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <img class="heroImg" src="topScorers/ademir1950.jpg">
+                    </div>
+                    <div class="back">
+                        <h1>Ademir</h1>
+                        <h3>Brazil - 1950</h3>
+                        <h4>8 Goals</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <img class="heroImg" src="topScorers/kocsis1954.jpg">
+                    </div>
+                    <div class="back">
+                        <h1>Sandor Kocsis</h1>
+                        <h3>Hungary- 1954</h3>
+                        <h4>11 Goals</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <img class="heroImg" src="topScorers/fontaine1958.jpg">
+                    </div>
+                    <div class="back">
+                        <h1>Just Fontaine</h1>
+                        <h3>France - 1958</h3>
+                        <h4>13 Goals</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <img class="heroImg" src="topScorers/garrincha1962.jpg">
+                    </div>
+                    <div class="back">
+                        <h1>"Garrincha"</h1>
+                        <h3>Brazil - 1962</h3>
+                        <h4>4 Goals</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <img class="heroImg" src="topScorers/eusebio1966.jpg">
+                    </div>
+                    <div class="back">
+                        <h1>Eusebio</h1>
+                        <h3>Portugal - 1966</h3>
+                        <h4>9 Goals</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <img class="heroImg" src="topScorers/muller1970.jpg">
+                    </div>
+                    <div class="back">
+                        <h1>Gerd Muller</h1>
+                        <h3>Germany - 1970</h3>
+                        <h4>10 Goals</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <img class="heroImg" src="topScorers/lato1974.jpg">
+                    </div>
+                    <div class="back">
+                        <h1>Grzegorz Lato</h1>
+                        <h3>Poland - 1974</h3>
+                        <h4>7 Goals</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <img class="heroImg" src="topScorers/kempes1978.jpg">
+                    </div>
+                    <div class="back">
+                        <h1>Mario Kempes</h1>
+                        <h3>Argentina - 1978</h3>
+                        <h4>6 Goals</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <img class="heroImg" src="topScorers/rossi1982.png">
+                    </div>
+                    <div class="back">
+                        <h1>Paolo Rossi</h1>
+                        <h3>Italy - 1982</h3>
+                        <h4>6 Goals</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <img class="heroImg" src="topScorers/lineker1986.jpg">
+                    </div>
+                    <div class="back">
+                        <h1>Gary Lineker</h1>
+                        <h3>England - 1986</h3>
+                        <h4>6 Goals</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <img class="heroImg" src="topScorers/salvator1990.jpg">
+                    </div>
+                    <div class="back">
+                        <h1>Salvator Schillachi</h1>
+                        <h3>Italy - 1990</h3>
+                        <h4>6 Goals</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <img class="heroImg" src="topScorers/stoichov1994.jpeg">
+                    </div>
+                    <div class="back">
+                        <h1>Hristo Stoichkov</h1>
+                        <h3>Bulgaria - 1994</h3>
+                        <h4>6 Goals</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <img class="heroImg" src="topScorers/suker1998.jpg">
+                    </div>
+                    <div class="back">
+                        <h1>Davor Suker</h1>
+                        <h3>Croatia - 1998</h3>
+                        <h4>6 Goals</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <img class="heroImg" src="topScorers/ronaldo2002.jpg">
+                    </div>
+                    <div class="back">
+                        <h1>Ronaldo</h1>
+                        <h3>Brazil - 2002</h3>
+                        <h4>8 Goals</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <img class="heroImg" src="topScorers/klose2006.jpeg">
+                    </div>
+                    <div class="back">
+                        <h1>Miroslav Klose</h1>
+                        <h3>Germany - 2006</h3>
+                        <h4>5 Goals</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <img class="heroImg" src="topScorers/forlan2010.jpg">
+                    </div>
+                    <div class="back">
+                        <h1>Diego Forlan</h1>
+                        <h3>Uruguay - 2010</h3>
+                        <h4>5 Goals</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <img class="heroImg" src="topScorers/james2014.jpeg">
+                    </div>
+                    <div class="back">
+                        <h1>James Rodriguez</h1>
+                        <h3>Colombia - 2014</h3>
+                        <h4>6 Goals</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <img class="heroImg" src="topScorers/kane2018.jpg">
+                    </div>
+                    <div class="back">
+                        <h1>Harry Kane</h1>
+                        <h3>England - 2018</h3>
+                        <h4>6 Goals</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<!--
     <script>
-        
         document.getElementById("champions-display").addEventListener("mouseenter", function(e) {
-            
-            if (document.getElementById('navigation').classList.contains('sidebar-open')){
-            addClass();
+
+            if (document.getElementById('navigation').classList.contains('sidebar-open')) {
+                addClass();
             }
-                                                                     
+
         });
-        
+
         document.getElementById("brackets-display").addEventListener("mouseenter", function(e) {
-            
-            if(document.getElementById('navigation').classList.contains('sidebar-open')){
-            addClass();
+
+            if (document.getElementById('navigation').classList.contains('sidebar-open')) {
+                addClass();
             }
-                                                                     
+
         });
-        
+
         document.getElementById("scorer-display").addEventListener("mouseenter", function(e) {
-            
-            if(document.getElementById('navigation').classList.contains('sidebar-open')){
-            addClass();    
+
+            if (document.getElementById('navigation').classList.contains('sidebar-open')) {
+                addClass();
             }
         });
-        
-        
+
+
         function selectChampion() {
-           document.getElementById('champions-display').style.display = '';
-             document.getElementById('brackets-display').style.display = 'none';
-             document.getElementById('scorer-display').style.display = 'none';
-            
+            document.getElementById('champions-display').style.display = '';
+            document.getElementById('brackets-display').style.display = 'none';
+            document.getElementById('scorer-display').style.display = 'none';
+
             if (document.getElementById('bracket').classList.contains('check-on')) {
                 document.getElementById('bracket').classList.toggle('check-on');
             }
@@ -533,122 +533,125 @@
             }
             document.getElementById('champion').classList.toggle('check-on');
         }
-        
+
         function selectBracket() {
             document.getElementById('champions-display').style.display = 'none';
             document.getElementById('scorer-display').style.display = 'none';
-             document.getElementById('brackets-display').style.display = '';
-             
-            
+            document.getElementById('brackets-display').style.display = '';
+
+
             if (document.getElementById('champion').classList.contains('check-on')) {
                 document.getElementById('champion').classList.toggle('check-on');
-                
-            } 
-            if (document.getElementById('scorer').classList.contains('check-on')) 
-            {
-                 document.getElementById('scorer').classList.toggle('check-on');
+
+            }
+            if (document.getElementById('scorer').classList.contains('check-on')) {
+                document.getElementById('scorer').classList.toggle('check-on');
             }
             document.getElementById('bracket').classList.toggle('check-on');
         }
-        
+
         function selectScorer() {
-            
+
             document.getElementById('champions-display').style.display = 'none';
-              document.getElementById('brackets-display').style.display = 'none';
-             document.getElementById('scorer-display').style.display = '';
-            
+            document.getElementById('brackets-display').style.display = 'none';
+            document.getElementById('scorer-display').style.display = '';
+
             if (document.getElementById('champion').classList.contains('check-on')) {
                 document.getElementById('champion').classList.toggle('check-on');
-            } 
+            }
             if (document.getElementById('bracket').classList.contains('check-on')) {
-                 document.getElementById('bracket').classList.toggle('check-on');
+                document.getElementById('bracket').classList.toggle('check-on');
             }
             document.getElementById('scorer').classList.toggle('check-on');
-            
-        
+
+
         }
-        
-        
+
+
         function trophyIn() {
-        var t = document.getElementsByClassName('fa-trophy')[0];
+            var t = document.getElementsByClassName('fa-trophy')[0];
             var check = document.getElementsByClassName('check')[0];
             check.style.color = 'white';
             t.style.webkitTransform = 'rotate(360deg)';
         }
-        
+
         function trophyOut() {
             var check = document.getElementsByClassName('check')[0];
             check.style.color = '#d20a11';
-        var t = document.getElementsByClassName('fa-trophy')[0];
+            var t = document.getElementsByClassName('fa-trophy')[0];
             t.style.webkitTransform = 'rotate(0deg)';
         }
-        
+
         function bracketIn() {
-        var t = document.getElementsByClassName('fa-sitemap')[0];
+            var t = document.getElementsByClassName('fa-sitemap')[0];
             var check = document.getElementsByClassName('check')[1];
-             check.style.color = 'white';
+            check.style.color = 'white';
             t.style.webkitTransform = 'rotate(90deg)';
         }
-        
+
         function bracketOut() {
             var check = document.getElementsByClassName('check')[1];
             check.style.color = '#d20a11';
-        var t = document.getElementsByClassName('fa-sitemap')[0];
+            var t = document.getElementsByClassName('fa-sitemap')[0];
             t.style.webkitTransform = 'rotate(0deg)';
         }
-        
+
         function scorerIn() {
-        var t = document.getElementsByClassName('fa-futbol')[0];
-              var check = document.getElementsByClassName('check')[2];
-             check.style.color = 'white';
+            var t = document.getElementsByClassName('fa-futbol')[0];
+            var check = document.getElementsByClassName('check')[2];
+            check.style.color = 'white';
             t.style.webkitTransform = 'rotate(360deg)';
         }
-        
+
         function scorerOut() {
             var check = document.getElementsByClassName('check')[2];
             check.style.color = '#d20a11';
-        var t = document.getElementsByClassName('fa-futbol')[0];
+            var t = document.getElementsByClassName('fa-futbol')[0];
             t.style.webkitTransform = 'rotate(0deg)';
         }
-        
-        
+
+
         function getLastVisitedDate() {
-            
+
             var date = new Date();
             var day = date.getDate();
             var month = date.getMonth();
             var year = date.getFullYear();
             var pageVisits = 1;
             if (localStorage.getItem("visited") != null) {
-               pageVisits = localStorage.getItem('visited');
-               pageVisits++;
-//               localStorage.setItem('visited', pageVisits);
-//               pageVisits = localStorage.getItem('visited');
+                pageVisits = localStorage.getItem('visited');
+                pageVisits++;
+                //               localStorage.setItem('visited', pageVisits);
+                //               pageVisits = localStorage.getItem('visited');
             }
-            
-            
-            
+
+
+
             console.log(day);
             console.log(month);
             console.log(year);
-        
-            var storageDate = {"month": month, "day": day, "year": year};
+
+            var storageDate = {
+                "month": month,
+                "day": day,
+                "year": year
+            };
             console.log(storageDate);
-        
-        localStorage.setItem('visited', pageVisits);
-        
-        var vNumber = localStorage.getItem('visited');
-       
-            
-//            document.getElementById('date').innerHTML = "Last Visited: " + storageDate.month + "-" + storageDate.day + "-" + storageDate.year;
-            
-            document.getElementById('visits').innerHTML = "Number of Visits: " + vNumber; 
+
+            localStorage.setItem('visited', pageVisits);
+
+            var vNumber = localStorage.getItem('visited');
+
+
+            //            document.getElementById('date').innerHTML = "Last Visited: " + storageDate.month + "-" + storageDate.day + "-" + storageDate.year;
+
+            document.getElementById('visits').innerHTML = "Number of Visits: " + vNumber;
         }
-        
+
         function addClass() {
             document.getElementById('navigation').classList.toggle('sidebar-open');
-            
-                    
+
+
         }
 
         // Constants used during the AJAX request.
@@ -657,17 +660,17 @@
         const ERROR = {
             "message": "The request failed!"
         };
-        
-           
-             
+
+
+
 
         // Wait for the document to load before binding event handlers further.
         document.addEventListener('DOMContentLoaded', function(e) {
-            
-           
-//            
-//            localStorage.setItem();
-            
+
+
+            //            
+            //            localStorage.setItem();
+
             selectChampion();
             // Obtain programmatic reference to the important elements of the page.
             var cform = document.getElementById('cform'),
@@ -688,7 +691,7 @@
 
 
             // brakets variables
-            
+
             var bform = document.getElementById('bform'),
                 brackets = document.getElementById('brackets'),
                 round16 = document.getElementById('round16'),
@@ -696,107 +699,86 @@
                 semifinals = document.getElementById('semifinals'),
                 final = document.getElementById('final'),
                 bracketScreen = document.getElementById('screen-display');
-            
+
             bracketScreen.style.opacity = '0';
-            
+
             bform.addEventListener('submit', function(b) {
-        
+
                 b.preventDefault();
-                
+
                 var request = new XMLHttpRequest(),
                     target = '/getWorldCupMatchDetails?year=' + brackets.value;
-                
+
                 request.open('GET', target);
-                
-                round16.innerHTML = ''; 
-                if (bracketScreen.classList.contains('rounds')){
-                bracketScreen.classList.remove('rounds');
+
+                round16.innerHTML = '';
+                if (bracketScreen.classList.contains('rounds')) {
+                    bracketScreen.classList.remove('rounds');
                     bracketScreen.style.opacity = '0';
-              }
-//                
-//                if (quarterfinals.classList.contains('rounds')) {
-//                    quarterfinals.classList.remove('rounds');
-//                    quarterfinals.style.opacity = '0';
-//                } 
-//                
-//                if (semifinals.classList.contains('rounds')){
-//                    semifinals.classList.remove('rounds');
-//                    semifinals.style.opacity = '0';
-//                }
-//                
-//                 if (final.classList.contains('rounds')){
-//                    final.classList.remove('rounds');
-//                    final.style.opacity = '0';
-//                }
-//                
-//                 round16.style.opacity = '0';
-               
-                quarterfinals.innerHTML = '';  
-                semifinals.innerHTML = ''; 
-                final.innerHTML = ''; 
-                
+                }
+
+                quarterfinals.innerHTML = '';
+                semifinals.innerHTML = '';
+                final.innerHTML = '';
+
                 request.send();
-                
+
                 request.onreadystatechange = function() {
-                
+
                     // Do nothing until the request is finished.
                     if (request.readyState === DONE) {
-                    
+
                         if (request.status === OKAY) {
-                        
-                        let dataObj = JSON.parse(request.responseText);
-                            
+
+                            let dataObj = JSON.parse(request.responseText);
+
                             console.log(dataObj);
                             var i;
                             for (i = 0; i < dataObj.length; i++) {
-                                
+
                                 if (dataObj[i].match_type == 'round16') {
-                                
-                                 
-                                round16.innerHTML += "<div class='team-bracket'>" +
-                                "<div id='team-1-flag' class='team flag'><img src='http://www.countryflags.io/" + dataObj[i].home_team_flag + "/flat/64.png' id='arg'></div>" +
-                                "<div id='team-1-name' class='team country-name'>" + dataObj[i].home_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].home_team_goals + "</div></div><br><div class='team-bracket'><div id='team-1-flag' class='team flag'><img src='http://www.countryflags.io/" + dataObj[i].away_team_flag +  "/flat/64.png' id='arg'></div><div id='team-1-name' class='team country-name'>" + dataObj[i].away_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].away_team_goals + "</div></div><br><br>";
-                                 
-                                 
-                                
-                                }
-                                
-                                else if (dataObj[i].match_type == 'quarterfinals') {
-                                    
-                                    quarterfinals.innerHTML += "<div class='team-bracket'>" + "<div id='team-1-flag' class='team flag'><img src='http://www.countryflags.io/" + dataObj[i].home_team_flag + "/flat/64.png' id='arg'></div>" + "<div id='team-1-name' class='team country-name'>" + dataObj[i].home_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].home_team_goals + "</div></div><br><div class='team-bracket'><div id='team-1-flag' class='team flag'><img src='http://www.countryflags.io/" + dataObj[i].away_team_flag +  "/flat/64.png' id='arg'></div><div id='team-1-name' class='team country-name'>" + dataObj[i].away_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].away_team_goals + "</div></div><br><br>"
-                                }
-                               else if (dataObj[i].match_type == 'semifinals') {
-                                   semifinals.innerHTML += "<div class='team-bracket'>" +
-                                "<div id='team-1-flag' class='team flag'><img src='http://www.countryflags.io/" + dataObj[i].home_team_flag + "/flat/64.png' id='arg'></div>" +
-                                "<div id='team-1-name' class='team country-name'>" + dataObj[i].home_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].home_team_goals + "</div></div><br><div class='team-bracket'><div id='team-1-flag' class='team flag'><img src='http://www.countryflags.io/" + dataObj[i].away_team_flag +  "/flat/64.png' id='arg'></div><div id='team-1-name' class='team country-name'>" + dataObj[i].away_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].away_team_goals + "</div></div><br><br>"   
-                               } 
-                                else if (dataObj[i].match_type == 'final') {
-                                   final.innerHTML += "<div class='team-bracket'>" +
-                                "<div id='team-1-flag' class='team flag'><img src='http://www.countryflags.io/" + dataObj[i].home_team_flag + "/flat/64.png' id='arg'></div>" +
-                                "<div id='team-1-name' class='team country-name'>" + dataObj[i].home_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].home_team_goals + "</div></div><br><div class='team-bracket'><div id='team-1-flag' class='team flag'><img src='http://www.countryflags.io/" + dataObj[i].away_team_flag +  "/flat/64.png' id='arg'></div><div id='team-1-name' class='team country-name'>" + dataObj[i].away_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].away_team_goals + "</div></div><br><br>" 
+
+
+                                    round16.innerHTML += "<div class='team-bracket'>" +
+                                        "<div id='team-1-flag' class='team flag'><img src='http://www.countryflags.io/" + dataObj[i].home_team_flag + "/flat/64.png' id='arg'></div>" +
+                                        "<div id='team-1-name' class='team country-name'>" + dataObj[i].home_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].home_team_goals + "</div></div><br><div class='team-bracket'><div id='team-1-flag' class='team flag'><img src='http://www.countryflags.io/" + dataObj[i].away_team_flag + "/flat/64.png' id='arg'></div><div id='team-1-name' class='team country-name'>" + dataObj[i].away_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].away_team_goals + "</div></div><br><br>";
+
+
+
+                                } else if (dataObj[i].match_type == 'quarterfinals') {
+
+                                    quarterfinals.innerHTML += "<div class='team-bracket'>" + "<div id='team-1-flag' class='team flag'><img src='http://www.countryflags.io/" + dataObj[i].home_team_flag + "/flat/64.png' id='arg'></div>" + "<div id='team-1-name' class='team country-name'>" + dataObj[i].home_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].home_team_goals + "</div></div><br><div class='team-bracket'><div id='team-1-flag' class='team flag'><img src='http://www.countryflags.io/" + dataObj[i].away_team_flag + "/flat/64.png' id='arg'></div><div id='team-1-name' class='team country-name'>" + dataObj[i].away_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].away_team_goals + "</div></div><br><br>"
+                                } else if (dataObj[i].match_type == 'semifinals') {
+                                    semifinals.innerHTML += "<div class='team-bracket'>" +
+                                        "<div id='team-1-flag' class='team flag'><img src='http://www.countryflags.io/" + dataObj[i].home_team_flag + "/flat/64.png' id='arg'></div>" +
+                                        "<div id='team-1-name' class='team country-name'>" + dataObj[i].home_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].home_team_goals + "</div></div><br><div class='team-bracket'><div id='team-1-flag' class='team flag'><img src='http://www.countryflags.io/" + dataObj[i].away_team_flag + "/flat/64.png' id='arg'></div><div id='team-1-name' class='team country-name'>" + dataObj[i].away_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].away_team_goals + "</div></div><br><br>"
+                                } else if (dataObj[i].match_type == 'final') {
+                                    final.innerHTML += "<div class='team-bracket'>" +
+                                        "<div id='team-1-flag' class='team flag'><img src='http://www.countryflags.io/" + dataObj[i].home_team_flag + "/flat/64.png' id='arg'></div>" +
+                                        "<div id='team-1-name' class='team country-name'>" + dataObj[i].home_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].home_team_goals + "</div></div><br><div class='team-bracket'><div id='team-1-flag' class='team flag'><img src='http://www.countryflags.io/" + dataObj[i].away_team_flag + "/flat/64.png' id='arg'></div><div id='team-1-name' class='team country-name'>" + dataObj[i].away_team + "</div><div id='team-1-goals' class='team team-goals'>" + dataObj[i].away_team_goals + "</div></div><br><br>"
                                 }
                             }
-//                            round16.classList.toggle('appear');
-                           setTimeout(function() {
-                            bracketScreen.classList.add('rounds');
-                            bracketScreen.style.opacity = '1';
-                           }, 500);
+                            //                            round16.classList.toggle('appear');
+                            setTimeout(function() {
+                                bracketScreen.classList.add('rounds');
+                                bracketScreen.style.opacity = '1';
+                            }, 500);
                         } else {
                             console.log(JSON.stringify(ERROR));
                         }
                     }
-                };         
+                };
             });
-                
+
 
             // Listen for submission events on the example form.
             cform.addEventListener('submit', function(e) {
-                 
-                if (document.getElementById('navigation').classList.contains('sidebar-open')){
+
+                if (document.getElementById('navigation').classList.contains('sidebar-open')) {
                     addClass();
                 }
-                 
-                
+
+
 
                 // Programmatically prevent the form from submitting.
                 e.preventDefault();
@@ -868,8 +850,10 @@
                 };
             });
         });
-
     </script>
+-->
+   
+   <script src="script.js"></script>
     <p id="date"></p>
     <p id="visits"></p>
 </body>

@@ -358,16 +358,17 @@ img {
 
 /* BRACKETS */
 
-
 h2 {
     font-family: righteous;
 }
-.rounds{
-  
+
+.rounds {
+
     transition: opacity .5s;
 }
+
 .rounds.appear {
-    opacity: 1;    
+    opacity: 1;
 }
 
 /*
@@ -377,9 +378,6 @@ h2 {
     
 }
 */
-
-
-
 
 .cup-bracket {
     width: 100px;
@@ -440,9 +438,8 @@ h2 {
     display: table;
     width: 100%;
     height: 650px;
-    border: 1px solid;
     text-align: center;
-    
+
 }
 
 #team-container {
