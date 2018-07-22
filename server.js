@@ -22,7 +22,7 @@ function isLoggedIn( req, res, next ) {
    next();
 }
 
-app.use('/', isLoggedin, express.static(path.join(__dirname, 'public')));
+app.use('/', isLoggedIn, express.static(path.join(__dirname, 'public')));
 
 //app.get('/', (req, res) => res.render('/index'));
 
