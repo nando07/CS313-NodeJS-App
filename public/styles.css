@@ -613,7 +613,10 @@ h2 {
     background-color: black;
 }
 
-
+.form-signin {
+    padding-top: 200px;
+    text-align: center;
+}
 
 .gif {
     margin-top: -20px;

@@ -1,18 +1,28 @@
 var express = require("express");
 const path = require('path');
+var router = express.Router();
 var app = express();
 var url = require('url');
+var session = require('express-session');
+var bodyParser = require('body-parser');
+var bcrypt = require('bcrypt');
+const saltRounds = 10;
 
 const { Pool } = require("pg");
 
 const connectionString = process.env.DATABASE_URL || "postgres://worldcupuser:fego@localhost:5432/worldcuphistory";
 const pool = new Pool({connectionString: connectionString});
 
+
 app.set("port", (process.env.PORT || 5000));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
 //app.get('/', (req, res) => res.render('/index'));
+
+app.get("/form", function(req, res) {
+    res.render('signUp')
+})
 
 app.get("/getWorldCupCountry", getWorldCupCountry)
 app.get("/getWorldCupChampions", getWorldCupChampions)
@@ -24,6 +34,10 @@ app.get("/getWorldCupMatchDetails", getWorldCupMatchDetails)
 app.listen(app.get("port"), function() {
     console.log("Now listening for connections on port: ", app.get("port"));
 });
+
+//function signIn(req, res) {
+//    
+//}
 
 function getWorldCupCountry(req, res) {
     console.log("Getting World Cup Country.");

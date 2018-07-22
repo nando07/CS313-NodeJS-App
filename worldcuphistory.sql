@@ -39,6 +39,13 @@ CREATE TABLE matches
     away_team_penalties INTEGER
 );
 
+CREATE TABLE user 
+(
+    id SERIAL PRIMARY KEY NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    password VARCHAR(100) NOT NULL
+);
+
 -- MATCHES 1998
 
 INSERT INTO matches(wc_year, match_date, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties) VALUES (1998, 'June-27-1998', 'round16', 'br', 'cl', 'Brazil', 'Chile', 4, 1, NULL, NULL);
