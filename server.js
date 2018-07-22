@@ -16,7 +16,13 @@ const pool = new Pool({connectionString: connectionString});
 
 app.set("port", (process.env.PORT || 5000));
 
-app.use(express.static(path.join(__dirname, 'public')));
+
+function isLoggedIn( req, res, next ) {
+   console.log("trying restricted file");
+   next();
+}
+
+app.use('/', isLoggedin, express.static(path.join(__dirname, 'public')));
 
 //app.get('/', (req, res) => res.render('/index'));
 
