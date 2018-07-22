@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //app.get('/', (req, res) => res.render('/index'));
 
 app.get('/form', function(req, res, next) {
-    res.sendFile('signUp.html');
+    res.sendFile('/signUp.html');
 });
 
 app.get("/getWorldCupCountry", getWorldCupCountry)
