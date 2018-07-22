@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //app.get('/', (req, res) => res.render('/index'));
 
 router.get('/form', function(req, res, next) {
-    res.render('signUp');
+    res.render('signUp', { title: 'Express'});
 });
 
 app.get("/getWorldCupCountry", getWorldCupCountry)
