@@ -20,9 +20,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //app.get('/', (req, res) => res.render('/index'));
 
-app.get("/form", function(req, res) {
-    res.render('signUp')
-})
+app.get('/form', function(req, res) {
+    res.render('signUp');
+});
 
 app.get("/getWorldCupCountry", getWorldCupCountry)
 app.get("/getWorldCupChampions", getWorldCupChampions)
