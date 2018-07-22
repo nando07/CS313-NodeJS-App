@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //app.get('/', (req, res) => res.render('/index'));
 
-app.get('/form', function(req, res) {
+router.get('/form', function(req, res, next) {
     res.render('signUp');
 });
 
