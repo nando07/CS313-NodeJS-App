@@ -25,7 +25,7 @@ const pool = new Pool({connectionString: connectionString});
 app.set("port", (process.env.PORT || 5000));
 
 
-app.get('/form'), (req, res) => {
+app.get('/form', (req, res) => {
     res.render('signUp');
 });
 
