@@ -6,7 +6,15 @@ var url = require('url');
 var session = require('express-session');
 var bodyParser = require('body-parser');
 var bcrypt = require('bcrypt');
+const mustacheExpress = require('mustache-express');
 const saltRounds = 10;
+
+const mustache = mustacheExpress();
+mustache.cache = null;
+app.engine('mustache', mustache);
+
+
+app.set('view engine', 'mustache');
 
 const { Pool } = require("pg");
 
@@ -16,6 +24,10 @@ const pool = new Pool({connectionString: connectionString});
 
 app.set("port", (process.env.PORT || 5000));
 
+
+app.get('/form'), (req, res) => {
+    res.render('signUp');
+});
 
 function isLoggedIn( req, res, next ) {
    console.log("trying restricted file");
