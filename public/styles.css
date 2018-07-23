@@ -390,6 +390,10 @@ h2 {
     display: inline-block;
 }
 
+.divider {
+    height: 10px;
+}
+
 .shine-effect:before {
     position: absolute;
     top: 0;
