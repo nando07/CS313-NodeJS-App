@@ -180,8 +180,8 @@ select,
 button {
     background-color: white;
     cursor: pointer;
-    -webkit-height: 50px;
-    height: 50px;
+    -webkit-height: 30px;
+    height: 30px;
     font-size: 20px;
     font-family: 'Righteous', cursive;
     border-radius: 5px;
