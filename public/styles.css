@@ -439,6 +439,7 @@ h2 {
     width: 100%;
     height: 650px;
     text-align: center;
+    border: 1px solid red;
 
 }
 
