@@ -29,7 +29,7 @@ app.get('/form', (req, res) => {
     res.render('signUp');
 });
 
-app.get('/', (req, res) => {
+app.get('/main', (req, res) => {
     res.render('index');
 });
 
