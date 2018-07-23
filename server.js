@@ -29,6 +29,10 @@ app.get('/form', (req, res) => {
     res.render('signUp');
 });
 
+app.get('/', (req, res) => {
+    res.render('index');
+});
+
 function isLoggedIn( req, res, next ) {
    console.log("trying restricted file");
    next();
