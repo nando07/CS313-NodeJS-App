@@ -29,6 +29,11 @@ app.get('/form', (req, res) => {
     res.render('signUp');
 });
 
+app.post('/user/add', (req, res) => {
+    console.log('post body', req.body);
+    res.redirect('/main');
+});
+
 // Just practicing creating a route and rendering a mustache template.
 app.get('/main', (req, res) => {
     res.render('index');
