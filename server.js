@@ -13,7 +13,7 @@ const mustache = mustacheExpress();
 mustache.cache = null;
 app.engine('mustache', mustache);
 
-
+// Using Mustache for Templates
 app.set('view engine', 'mustache');
 
 const { Pool } = require("pg");
@@ -29,6 +29,7 @@ app.get('/form', (req, res) => {
     res.render('signUp');
 });
 
+// Just practicing creating a route and rendering a mustache template.
 app.get('/main', (req, res) => {
     res.render('index');
 });
