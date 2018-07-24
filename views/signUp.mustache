@@ -10,14 +10,10 @@
 </head>
 <body>
 <div>
-	<input type="text" id="username" placeholder="username"><br>
-	<input type="password" id="password" placeholder="password"><br>
-	<button onclick="login();">Log in</button>
-	<button onclick="logout();">Log out</button><br>
-	<br>
-	<button onclick="getServerTime()">Get server time</button>
-	<div id="status"></div>
+<form method="POST" action="/user/add">
+	<input type="email" id="username" placeholder="email"><br>
+	<button type="submit">Join Community</button>
+    </form>
 </div>
-
 </body>
 </html>
