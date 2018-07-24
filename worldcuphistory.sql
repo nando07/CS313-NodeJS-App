@@ -39,11 +39,10 @@ CREATE TABLE matches
     away_team_penalties INTEGER
 );
 
-CREATE TABLE user 
+CREATE TABLE users 
 (
     id SERIAL PRIMARY KEY NOT NULL,
-    name VARCHAR(100) NOT NULL,
-    password VARCHAR(100) NOT NULL
+    username VARCHAR(100) NOT NULL
 );
 
 -- MATCHES 1998
