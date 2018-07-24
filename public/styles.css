@@ -627,3 +627,49 @@ h2 {
 .gif {
     margin-top: -20px;
 }
+
+/*Top navbar*/
+
+.navbar {
+  overflow: hidden;
+  background-color: #141414;
+  position: fixed;
+  top: 0;
+  width: 100%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .6);
+    z-index: 1;
+}
+
+.navbar form {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  height: 40px;    
+  text-align: center;
+  padding-top: 8px;
+  padding-right: 50px;
+  padding-bottom: 8px;    
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.navbar input {
+border-radius: 5px;
+    height: 24px;
+}
+
+.join {
+     background-color: white;
+    cursor: pointer;
+    -webkit-height: 24px;
+    height: 24px;
+    font-size: 14px;
+    font-family: 'Righteous', cursive;
+    border-radius: 5px;
+    
+}
