@@ -31,7 +31,26 @@ app.get('/form', (req, res) => {
 
 app.post('/user/add', (req, res) => {
     console.log('post body', req.body);
+    
+    var sql = 'INSERT INTO users (username) VALUES ($1)';
+    var params = [req.body.username];
+
+    pool.query(sql, params, function(err, result){
+        if (err) {
+            console.log("An error occurred with the DB");
+            console.log(err);
+//            callback(err, null);
+        }
+        else {
+        console.log("Inserted Username: " + JSON.stringify(result));
+        }
+
+//        callback(null, result.rows);
+    });
+    
+    
     res.redirect('/main');
+    
 });
 
 // Just practicing creating a route and rendering a mustache template.
