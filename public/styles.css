@@ -498,7 +498,7 @@ h2 {
     vertical-align: middle;
     display: table-cell;
     
-    padding-top: 10px;
+    padding-top: 15px;
 }
 
 @media only screen and (max-width: 800px) {
