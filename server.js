@@ -23,7 +23,7 @@ const pool = new Pool({connectionString: connectionString});
 
 
 app.set("port", (process.env.PORT || 5000));
-
+app.use(bodyParser.urlencoded({extended: false }));
 
 app.get('/form', (req, res) => {
     res.render('signUp');
@@ -45,7 +45,7 @@ function isLoggedIn( req, res, next ) {
 }
 
 app.use('/', isLoggedIn, express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.urlencoded({extended: false}));
+
 //app.get('/', (req, res) => res.render('/index'));
 
 
