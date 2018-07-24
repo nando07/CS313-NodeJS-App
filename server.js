@@ -45,7 +45,7 @@ function isLoggedIn( req, res, next ) {
 }
 
 app.use('/', isLoggedIn, express.static(path.join(__dirname, 'public')));
-
+app.use(bodyParser.urlencoded({extended: false}));
 //app.get('/', (req, res) => res.render('/index'));
 
 
