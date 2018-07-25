@@ -35,7 +35,7 @@ app.post('/user/add', (req, res) => {
     var sql = 'INSERT INTO users (username) VALUES ($1)';
     var params = [req.body.username];
 
-    if(req.body.username) {
+//    if(req.body.username) {
     pool.query(sql, params, function(err, result){
         if (err) {
             console.log("An error occurred with the DB");
@@ -46,10 +46,10 @@ app.post('/user/add', (req, res) => {
             res.redirect('/main');
         }
     });
-    }
-    else {
-       console.log("empty body");
-    }
+//    }
+//    else {
+//       console.log("empty body");
+//    }
     
     
 //    res.redirect('/main');
