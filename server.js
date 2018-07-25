@@ -42,11 +42,12 @@ app.post('/user/add', (req, res) => {
         }
         else {
         console.log("Inserted Username: " + JSON.stringify(result));
+            res.redirect('/main');
         }
     });
     
     
-    res.redirect('/main');
+//    res.redirect('/main');
     
 });
 
