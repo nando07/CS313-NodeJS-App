@@ -24,9 +24,10 @@
 
 
         function selectChampion() {
-            document.getElementById('champions-display').style.display = '';
+            
             document.getElementById('brackets-display').style.display = 'none';
             document.getElementById('scorer-display').style.display = 'none';
+            document.getElementById('champions-display').style.display = '';
 
             if (document.getElementById('bracket').classList.contains('check-on')) {
                 document.getElementById('bracket').classList.toggle('check-on');
