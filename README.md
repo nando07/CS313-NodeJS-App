@@ -10,10 +10,10 @@ This is a simple express.js application to retrieve World Cup history data. This
 Because most sources will have cluttered interfaces, I decided to create a SPA using a side menu. Users can easily retrieve simple data such as the final match result for each World Cup.
 
 ## Screenshots
-![Image 1](http://full/path/to/img.jpg "Optional title")
-![Image 1](http://full/path/to/img.jpg "Optional title")
-![Image 1](http://full/path/to/img.jpg "Optional title")
-![Image 1](http://full/path/to/img.jpg "Optional title")
+![Image 1](https://github.com/nando07/CS313-NodeJS-App/blob/master/public/screenshots/Screen%20Shot%202018-07-24%20at%207.28.14%20PM.png "Champions Screen")
+![Image 2](https://github.com/nando07/CS313-NodeJS-App/blob/master/public/screenshots/Screen%20Shot%202018-07-24%20at%207.28.34%20PM.png "Side Menu")
+![Image 3](https://github.com/nando07/CS313-NodeJS-App/blob/master/public/screenshots/Screen%20Shot%202018-07-24%20at%207.29.17%20PM.png "Brackets")
+![Image 4](https://github.com/nando07/CS313-NodeJS-App/blob/master/public/screenshots/Screen%20Shot%202018-07-24%20at%207.29.53%20PM.png "Top Scorer")
 
 ## License
 MIT © [Fernando Gomez]()
