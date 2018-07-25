@@ -39,13 +39,10 @@ app.post('/user/add', (req, res) => {
         if (err) {
             console.log("An error occurred with the DB");
             console.log(err);
-//            callback(err, null);
         }
         else {
         console.log("Inserted Username: " + JSON.stringify(result));
         }
-
-//        callback(null, result.rows);
     });
     
     
@@ -65,12 +62,6 @@ function isLoggedIn( req, res, next ) {
 
 app.use('/', isLoggedIn, express.static(path.join(__dirname, 'public')));
 
-//app.get('/', (req, res) => res.render('/index'));
-
-
-//app.get('/form', function(req, res) {
-//    res.sendFile(path.join(__dirname + '/signUp.html'));
-//});
 
 app.get("/getWorldCupCountry", getWorldCupCountry)
 app.get("/getWorldCupChampions", getWorldCupChampions)
@@ -82,10 +73,6 @@ app.get("/getWorldCupMatchDetails", getWorldCupMatchDetails)
 app.listen(app.get("port"), function() {
     console.log("Now listening for connections on port: ", app.get("port"));
 });
-
-//function signIn(req, res) {
-//    
-//}
 
 function getWorldCupCountry(req, res) {
     console.log("Getting World Cup Country.");
@@ -212,8 +199,6 @@ function getWorldCupDetails(req, res) {
             res.json(result);
         }
     });
-    
-//    res.json(result);
 }
 function getWorldCupDetailsFromDb(year, callback) {
     console.log("getting Details from DB with year ", year);
@@ -239,10 +224,6 @@ function getWorldCupMatchDetails(req, res) {
     var year = req.query.year;
     console.log("Retrieving Match Details for year: ", year);
     
-//    var result = [{runner_up_code: 
-//                   "URU", champion_code: "ARG", champion: "Uruguay", runner_up: "Argentina", champion_score: 3, runner_up_score: 1}];
-
-
     getWorldCupMatchDetailsFromDb(year, function(error, result) {
         console.log("Got data back from DB with result:", result);
         if (error || result == null) {
@@ -251,14 +232,10 @@ function getWorldCupMatchDetails(req, res) {
             res.json(result);
         }
     });
-    
-//    res.json(result);
 }
 function getWorldCupMatchDetailsFromDb(year, callback) {
     console.log("getting Details from DB with year ", year);
-   
-//    var sql = "SELECT country, year, champion, runner_up, champion_code, runner_up_code, champion_score, runner_up_score, champion_penalties, runner_up_penalties FROM worldcup WHERE year = $1::int";
-    
+       
     var sql = "SELECT wc_year, match_type, home_team_flag, away_team_flag, home_team, away_team, home_team_goals, away_team_goals, home_team_penalties, away_team_penalties FROM matches WHERE wc_year = $1::int";
     var params = [year];
 

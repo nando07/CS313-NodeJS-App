@@ -2,8 +2,6 @@ body {
     margin: 0px;
     background-color: white;
     min-height: 300px;
-
-
 }
 
 /* Menu Bar*/
@@ -213,18 +211,6 @@ button:hover {
 
 /* Home Team Area */
 
-/*
-#main-container{
-      border: 1px solid red;
-        text-align: center;
-    max-width: 100vw;
-    height: auto;
-    width: auto;
-    max-height: 100vh;
- 
-}
-*/
-
 #cup {
     /*    border: 1px solid blue;*/
 }
@@ -372,14 +358,6 @@ h2 {
     opacity: 1;
 }
 
-/*
-#round16, #quarterfinals, #semifinals, #final {
-    
-    transition: all 2s ease-in-out; 
-    
-}
-*/
-
 .cup-bracket {
     width: 100px;
 }
@@ -439,17 +417,13 @@ h2 {
 }
 
 .col-container {
-
     display: table;
     width: 100%;
     height: 550px;
     text-align: center;
-   
-
 }
 
 #team-container {
-
     text-align: center;
 }
 
@@ -497,7 +471,7 @@ h2 {
 .column-2 {
     vertical-align: middle;
     display: table-cell;
-    
+
     padding-top: 15px;
 }
 
@@ -507,12 +481,6 @@ h2 {
         width: 100%;
     }
 }
-
-/*
-#brackets-display {
-    min-width: 100%;
-}
-*/
 
 /* TOP SCORERS SECTIOM */
 
@@ -527,8 +495,6 @@ h2 {
 }
 
 .front img {
-    /*            padding-top: 20px;*/
-    /*            padding-left: 5px;*/
     border-radius: 20px;
 }
 
@@ -539,14 +505,8 @@ h2 {
 
 #wrapper {
     margin: auto;
-    /*
-    position: relative;
-    top: 50px;
-*/
     text-align: center;
     width: 900px;
-
-
 }
 
 .card-container {
@@ -580,8 +540,6 @@ h2 {
     position: relative;
 }
 
-
-
 .front,
 .back {
     -webkit-backface-visibility: hidden;
@@ -596,15 +554,7 @@ h2 {
 .front h1,
 .back h1 {
     text-align: center;
-    /*            font-family: 'Indie Flower', cursive;*/
 }
-
-/*
-        .back p {
-            text-align: justify;
-            padding: 14px;
-        }
-*/
 
 .front {
     z-index: 2;
@@ -632,45 +582,45 @@ h2 {
 /*Top navbar*/
 
 .navbar {
-  overflow: hidden;
-  background-color: #141414;
-  position: fixed;
-  top: 0;
-  width: 100%;
+    overflow: hidden;
+    background-color: #141414;
+    position: fixed;
+    top: 0;
+    width: 100%;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, .6);
     z-index: 1;
 }
 
 .navbar form {
-  float: right;
-  display: block;
-  color: #f2f2f2;
-  height: 40px;    
-  text-align: center;
-  padding-top: 8px;
-  padding-right: 50px;
-  padding-bottom: 8px;    
-  text-decoration: none;
-  font-size: 17px;
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    height: 40px;
+    text-align: center;
+    padding-top: 8px;
+    padding-right: 50px;
+    padding-bottom: 8px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
 .navbar a:hover {
-  background: #ddd;
-  color: black;
+    background: #ddd;
+    color: black;
 }
 
 .navbar input {
-border-radius: 5px;
+    border-radius: 5px;
     height: 24px;
 }
 
 .join {
-     background-color: white;
+    background-color: white;
     cursor: pointer;
     -webkit-height: 24px;
     height: 24px;
     font-size: 14px;
     font-family: 'Righteous', cursive;
     border-radius: 5px;
-    
+
 }
